@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,12 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Lights, Camera, Quiz Time!</title>
 </head>
+
 <body>
     <header>
-        <h1 class="heading"><i class="fa-solid fa-clapperboard"></i> Lights, Camera, Quiz Time!</h1>
+        <a href="index.html">
+            <h1 class="heading"><i class="fa-solid fa-clapperboard"></i> Lights, Camera, Quiz Time!</h1>
+        </a>
     </header>
     <main>
         <div class="categorgies">
@@ -21,13 +25,35 @@
             <button class="btn" id="comedy">Comedy <i class="fa-solid fa-masks-theater"></i></button>
             <button class="btn" id="fantasy-adventure">Fantasy-Adventure <i class="fa-solid fa-dragon"></i></button>
         </div>
+
+        <div class="score"></div>
+
+        <div class="game-area">
+            <div class="question-box"></div>
+            <div class="answer-box">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="timer"></div>
     </main>
     <footer>
-        <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="Visit Youtube to find more information about the author"><i class="fa-brands fa-square-youtube"></i></a>
-        <a href="https://www.imdb.com/" target="_blank" rel="noopener" aria-label="Visit IMDB to update your knowledge on movie trivia"><i class="fa-brands fa-imdb"></i></a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Visit us on Instagram"><i class="fa-brands fa-square-instagram"></i></a>
+        <ul>
+            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener"
+                    aria-label="Visit Youtube to find more information about the author"><i
+                        class="fa-brands fa-square-youtube"></i></a></li>
+            <li><a href="https://www.imdb.com/" target="_blank" rel="noopener"
+                    aria-label="Visit IMDB to update your knowledge on movie trivia"><i
+                        class="fa-brands fa-imdb"></i></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                    aria-label="Visit us on Instagram"><i class="fa-brands fa-square-instagram"></i></a></li>
+        </ul>
     </footer>
     <script src="https://kit.fontawesome.com/b9e601c9ec.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
