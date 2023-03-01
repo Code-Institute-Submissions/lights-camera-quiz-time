@@ -23,10 +23,10 @@ main {
 
 .heading {
     font-family: "Work Sans", sans-serif;
-    text-transform: uppercase;
-    color: #411D0C;
+    color: #9E3D36;
     letter-spacing: 3px;
     font-weight: 600;
+    font-size: 200%;
     text-align: center;
     padding: 10px;
 }
@@ -40,11 +40,60 @@ main {
     display: inline-block;
     width: 25%;
     border-radius: 50%;
-    height: 100px;
-    margin: 1rem 1rem;
+    min-height: 100px;
+    margin: 2rem 1rem;
     border: 2px solid #9E3D36;
     background-color: #DDA0A4;
-    color: #411D0C;
-    text-transform: uppercase;
-    font-weight: 900;
+    color: #9E3D36;
+    font-weight: 600;
+}
+
+footer ul {
+    text-align: center;
+}
+
+footer li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 10px;
+}
+
+footer i {
+    color: #9E3D36;
+    font-size: 150%;
+}
+
+@media screen and (max-width: 750px) {
+    main {
+        height: auto;
+    }
+    
+    .categories {
+        height: auto;
+        padding: 0;
+    }
+
+    .btn {
+        min-height: 75px;
+        width: 35%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    main {
+        width: 75%;
+    }
+
+    .categories {
+        width: 50%;
+    }
+
+    .btn {
+        min-height: 35px;
+        width: 35%;
+        font-size: 25%;
+        font-weight: 600;
+    }
 }
