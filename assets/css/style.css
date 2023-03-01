@@ -63,6 +63,24 @@ footer i {
     font-size: 150%;
 }
 
+/* styles for game question and answer box area */
+.score {
+    text-align: center;
+}
+
+.game-area, .question-area, .answer-area {
+    width: 75%;
+}
+
+.answer.box {
+    display: flex;
+    flex-direction: row;
+}
+
+.timer {
+    text-align: center;
+}
+
 @media screen and (max-width: 750px) {
     main {
         height: auto;
