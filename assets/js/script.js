@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function runGame() {
-    if(gameType === "scifi") {
+    if(gameType === "sci-fi") {
         displayScifiQuestion();
     }
 }
@@ -36,11 +36,13 @@ function incrementScore() {
 }
 
 function displayScifiQuestion() {
-    let scifiQuestions = [{question: "Who is Luke Skywalkers' father?", Option1: "Han Solo", Option2: "Lando Calrissian", Option3: "Darth Vader", Option4: "Obi Wan", answer:"3"}]
+    let scifiQuestions = [{question: "Who is Luke Skywalkers' father?", options: ["Han Solo", "Lando Calrissian", "Darth Vader", "Obi Wan"], answer:2}]
     let questionBox = document.getElementsByClassName("question-area");
-    let answerBox = document.getElementsByClassName("answer-area");
-    questionBox.textContent = scifiQuestions[0];
-    answerBox.textContent = scifiQuestions[1];
+    questionBox.textContent = scifiQuestions.question;
+    let answerBox = document.querySelectorAll(".answer-box");
+    answerBox.forEach(function(element, index) {
+        element.textContent = scifiQuestions.options[index]
+    })
 }
 
 function displayComedyQuestion() {
