@@ -34,10 +34,14 @@ main {
 .categories {
     width: 75%;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    /* justify-content: space-around; */
 }
 
 .btn {
-    display: inline-block;
+    /* display: inline-block; */
     width: 25%;
     border-radius: 50%;
     min-height: 100px;
@@ -46,6 +50,11 @@ main {
     background-color: #DDA0A4;
     color: #9E3D36;
     font-weight: 600;
+    /* display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; */
 }
 
 a {
