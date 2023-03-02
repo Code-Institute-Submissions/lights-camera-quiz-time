@@ -153,6 +153,14 @@ footer i {
     padding: 10px;
 }
 
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}
+
 @media screen and (max-width: 750px) {
     main {
         height: auto;
