@@ -48,6 +48,11 @@ main {
     font-weight: 600;
 }
 
+a {
+    text-decoration: none;
+    color: #9E3D36;
+}
+
 footer ul {
     text-align: center;
 }
