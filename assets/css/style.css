@@ -57,6 +57,14 @@ main {
     flex-wrap: wrap; */
 }
 
+/* adapted from Brian Design Youtube tutorial on how to make a quiz app more details in the README file */
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 #DDA0A4;
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
 a {
     text-decoration: none;
     color: #9E3D36;
