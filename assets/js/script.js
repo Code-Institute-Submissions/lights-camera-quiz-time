@@ -3,6 +3,12 @@ let score;
 let questionCounter;
 const question = document.getElementById("question");
 const answers = Array.from(document.querySelectorAll(".option-text"));
+console.log(answers);
+
+// lines 9 - 11 are taken from James Q Quick tutorial, more details in the README file
+let currentQuestion = {};
+let acceptingAnswers = false;
+let availableQuestions = [];
 
 // Design of question array adapated from How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project for Beginners Tutorial
 
@@ -35,7 +41,7 @@ const scifiQuestions = [{
     option4: "Patrick Stewart",
     answer: 3,
 }, {
-    question: "What is the name of the ship in Alien>",
+    question: "What is the name of the ship in Alien?",
     option1: "Tardis",
     option2: "Serenity",
     option3: "Nostromo",
@@ -45,53 +51,74 @@ const scifiQuestions = [{
 
 // Code adapted from the Love Maths Walkthrough for the function to execute when the DOM loads
 
-document.addEventListener("DOMContentLoaded", function () {
-    let buttons = document.getElementsByTagName("button");
-    for (let button of buttons) {
-        button.addEventListener("click", function () {
-            let gameType = this.getAttribute("data-type")
-            if (gameType === "sci-fi") {
-                alert("You have chosen the scifi game")
-                runGame(gameType);
-            } else {
-                alert(`You have chosen ${gameType}`)
-            }
-        })
-    }
-})
+// document.addEventListener("DOMContentLoaded", function () {
+//     let buttons = document.getElementsByTagName("button");
+//     for (let button of buttons) {
+//         button.addEventListener("click", function () {
+//             let gameType = this.getAttribute("data-type")
+//             if (gameType === "sci-fi") {
+//                 alert("You have chosen the scifi game")
+//                 runGame(gameType);
+//             } else {
+//                 alert(`You have chosen ${gameType}`)
+//             }
+//         })
+//     }
+// })
 
 
-function runGame(gameType) {
+function runGame() {
     score = 0;
     questionCounter = 0;
-    if (gameType === "sci-fi") {
-        displayScifiQuestion();
-    }
+    availableQuestions = [...scifiQuestions];
+    displayScifiQuestion();
+    // if (gameType === "sci-fi") {
+    //     availableQuestions = [...scifiQuestions];
+    //     displayScifiQuestion();
+    // }
 }
 console.log(runGame);
+runGame();
 
 function displayScifiQuestion() {
 
+    if(questionCounter >= maxQuestions || availableQuestions.length === 0) {
+        return window.location.assign("index.html")
+    }
+
     questionCounter++;
-    let availableQuestions = [...scifiQuestions];
+    // availableQuestions = [...scifiQuestions];
 
     // calculate the value of the question index adapted from Brian Design Tutorial
 
-    let questionIndex = Math.floor(Math.random() * availableQuestions.length);
-    let currentQuestion = availableQuestions[questionIndex];
+    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[questionIndex];
 
     // Access the game DOM elements from the game area and display to the user
+    // Details on the code used to display the question and 4 options was adapted from James Q Quick Youtube tutorial on building a Quiz App
 
     question.innerText = currentQuestion.question;
     console.log(currentQuestion.question);
 
-    console.log(answers);
     answers.forEach(function (option) {
         const number = option.dataset["number"];
         option.innerText = currentQuestion["option" + number];
     })
+
+    availableQuestions.splice[questionIndex, 1];
+    acceptingAnswers = true;
 }
+
+answers.forEach(function (option) {
+    option.addEventListener("click", function(event) {
+        const selectedChoice = event.target;
+        const selectedAnswer = selectedChoice.dataset["number"];
+        displayScifiQuestion();
+    })
+})
+
 console.log(displayScifiQuestion)
+
 function checkAnswer() {
 
 }
