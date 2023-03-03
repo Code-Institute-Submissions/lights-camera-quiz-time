@@ -18,9 +18,9 @@ body {
 main {
     background: url("../images/popcorn.jpg") no-repeat center center;
     background-size: cover;
-    height: 375px;
-    width: 75%;
-    margin: 0 auto;
+    height: vh;
+    width: vw;
+    /* margin: 0 auto; */
 }
 
 .heading {
@@ -36,24 +36,25 @@ main {
 /* Design styles for categories area with 6 buttons for user to click on*/
 
 .categories {
-    width: 75%;
-    margin: 0 auto;
+    width: vw;
+    /* margin: 0 auto; */
     display: flex;
     flex-wrap: wrap;
-    /* align-items: center; */
-    /* justify-content: space-around; */
+    align-items: center;
+    justify-content: center;
 }
 
 .btn {
     /* display: inline-block; */
-    width: 25%;
+    width: 15rem;
     border-radius: 50%;
-    min-height: 100px;
+    height: 10rem;
     margin: 2rem 1rem;
     border: 2px solid #9E3D36;
     background-color: #DDA0A4;
     color: #9E3D36;
     font-weight: 600;
+    font-size: 120%;
     /* display: flex;
     flex-direction: row;
     align-items: center;

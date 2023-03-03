@@ -1,6 +1,8 @@
 const maxQuestions = 5;
 let score;
 let questionCounter;
+const question = document.getElementById("question");
+const answers = Array.from(document.querySelectorAll(".answer-box"));
 
 // Design of question array adapated from How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project for Beginners Tutorial
 
@@ -51,9 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
             if (gameType === "sci-fi") {
                 alert("You have chosen the scifi game")
                 runGame(gameType);
-            } else [
+            } else {
                 alert(`You have chosen ${gameType}`)
-            ]
+            }
         })
     }
 })
@@ -66,6 +68,7 @@ function runGame(gameType) {
         displayScifiQuestion();
     }
 }
+console.log(runGame);
 
 function displayScifiQuestion() {
 
@@ -79,18 +82,16 @@ function displayScifiQuestion() {
 
     // Access the game DOM elements from the game area and display to the user
 
-    let question = document.getElementById("question");
     question.innerText = currentQuestion.question;
     console.log(currentQuestion.question);
 
-    let answers = Array.from(document.querySelectorAll(".answer-box"));
     console.log(answers);
     answers.forEach(function (option) {
         const number = option.dataset["number"];
         option.innerText = currentQuestion["option" + number];
     })
 }
-
+console.log(displayScifiQuestion)
 function checkAnswer() {
 
 }
