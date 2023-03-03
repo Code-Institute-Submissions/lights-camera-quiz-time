@@ -2,7 +2,7 @@ const maxQuestions = 5;
 let score;
 let questionCounter;
 const question = document.getElementById("question");
-const answers = Array.from(document.querySelectorAll(".answer-box"));
+const answers = Array.from(document.querySelectorAll(".option-text"));
 
 // Design of question array adapated from How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project for Beginners Tutorial
 
