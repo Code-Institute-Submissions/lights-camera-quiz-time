@@ -77,14 +77,17 @@ function displayScifiQuestion() {
     let questionIndex = Math.floor(Math.random() * availableQuestions.length);
     let currentQuestion = availableQuestions[questionIndex];
 
-    // Access the question and answer DOM elements fromt the game area and display
+    // Access the game DOM elements from the game area and display to the user
 
-    let question = document.getElementsByClassName("question-area");
-    question.textContent = currentQuestion.question;
+    let question = document.getElementById("question");
+    question.innerText = currentQuestion.question;
+    console.log(currentQuestion.question);
 
     let answers = Array.from(document.querySelectorAll(".answer-box"));
-    answers.forEach(function (element, index) {
-        element.textContent = currentQuestion.option[index];
+    console.log(answers);
+    answers.forEach(function (option) {
+        const number = option.dataset["number"];
+        option.innerText = currentQuestion["option" + number];
     })
 }
 
