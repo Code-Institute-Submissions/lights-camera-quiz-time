@@ -113,6 +113,9 @@ answers.forEach(function (option) {
     option.addEventListener("click", function(event) {
         const selectedChoice = event.target;
         const selectedAnswer = selectedChoice.dataset["number"];
+
+        // Checking to see whether the user's selected answer is correct
+        const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
         displayScifiQuestion();
     })
 })
