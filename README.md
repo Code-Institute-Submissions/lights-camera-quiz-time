@@ -1,4 +1,4 @@
-# Light, Camera, Quiz Time
+# Lights, Camera, Quiz Time
 
 This website provides an interavtive quiz with 6 different categories of movie genre for the user to choose. The user will be asked 5 questions in each category and their score will be displayed and stored at the end of each category.
 
@@ -12,16 +12,16 @@ This website provides an interavtive quiz with 6 different categories of movie g
 - Returning Visitor Goals
 1. I want to play other categories I did not get a chance to on the first visit.
 2. I want to beat my original score.
-3. I want to access the author's social media accounts to see any other intneractive games the author has designed.
+3. I want to access the author's social media accounts to see any other interactive games the author has designed.
 
 - Frequent User Goals
-1. I want to re play each of the categories to see have I answered all possible questions.
+1. I want to replay each of the categories to see have I answered all possible questions.
 2. I want to check have other users beaten my top score.
 3. I want to check the social media blog posts to see are there any future features being implemented.
 
 - Owner Goal
 1. I want to provide a fun and engaging interactive game for users.
-2. I want to provide a wide range of questions from  avriety of movie genres to engage players of all ages and interets.
+2. I want to provide a wide range of questions from a variety of movie genres to engage players of all ages and interests.
 3. I want to develop an online presence showcasing my expertise in the area of interactive game design.
 
 ### Design
@@ -50,17 +50,17 @@ The popcorn image was sourced from [Pixabay](https://pixabay.com/) from [Pexels]
 - Score Section
 
 ### Acessibility
-- Using semantic header, section and footer elements to aid screen readers.
+- Using semantic header, main and footer elements to aid screen readers.
 - Including aria labels for social media clickable links.
-- Using alt attribute for the popcorn image used
+- Using an alt attribute for the popcorn image used.
 - Using a palette of colors that allow clear contrast for users.
 - Using a green background color for correct answers and red color for incorrect answers.
 - Using accesible fonts such as work sans for the header and sans-serif for the back-up fonts.
 
 ### Languages
-- [HTML]()
-- [CSS]()
-- [JS]()
+- [HTML](https://en.wikipedia.org/wiki/HTML5)
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+- [JS](https://en.wikipedia.org/wiki/JavaScript)
 
 ### Frameworks, Libraries and Programs
 1. [Coolors](https://coolors.co/)
@@ -86,15 +86,16 @@ The popcorn image was sourced from [Pixabay](https://pixabay.com/) from [Pexels]
 - 
 - 
 - 
+
 ### Validation and Testing
-[W3C HTML Validator]()
+[W3C HTML Validator](https://validator.w3.org/#validate_by_input)
 - 
 - 
 
-[W3C CSS Validator]()
+[W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 - 
 - 
-[JS Validator]()
+[JS Validator](https://jshint.com/)
 - 
 - 
 
@@ -132,7 +133,7 @@ First Time Users
 - 
 
 ### Deployment
-[Github]() was used to deploy the site.
+[Github](https://github.com/) was used to deploy the site.
 The site is accessible [here]().
 
 #### Instructions
@@ -141,7 +142,7 @@ The site is accessible [here]().
 3. Click on the settings option.
 4. Click on pages on the left hand side under the code and automation heading.
 5. Under the heading of build and deployment click the branch drop down menu and select main and click save.
-6. Refresh the page and a notification will display that your site is now live and click the visit site option
+6. Refresh the page and a notification will display that your site is now live and click the visit site option.
 
 ### Credits
 #### Code
