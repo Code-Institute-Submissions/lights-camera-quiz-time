@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function runGame(gameType) {
     score = 0;
-    0;
+    questionCounter = 0;
     if (gameType === "sci-fi") {
         displayScifiQuestion();
     }
@@ -72,10 +72,12 @@ function displayScifiQuestion() {
     questionCounter++;
     let availableQuestions = [...scifiQuestions];
 
-    // calculate the value of the question index
+    // calculate the value of the question index adapted from Brian Design Tutorial
 
     let questionIndex = Math.floor(Math.random() * availableQuestions.length);
     let currentQuestion = availableQuestions[questionIndex];
+
+    // Access the question and answer DOM elements fromt the game area and display
 
     let question = document.getElementsByClassName("question-area");
     question.textContent = currentQuestion.question;
