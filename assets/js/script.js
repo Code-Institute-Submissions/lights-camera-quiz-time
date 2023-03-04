@@ -84,6 +84,78 @@ const scifiQuestions = [{
     answer: 3,
 }]
 
+const fantasyAdevntureQuestions = [{
+    question: "How many rings of power were made in LOTR?",
+    option1: "20",
+    option2: "19",
+    option3: "21",
+    option4: "1",
+    answer: 1,
+}, {
+    question: "What ingredients were used to make Harry's wand?",
+    option1: "Holly & Phoenix Feather",
+    option2: "Oak & Unicorn Hair",
+    option3: "Elm & Dragon Heartstring",
+    option4: "Elder & Thestral Hair",
+    answer: 1,
+}, {
+    question: "What is the name of the good witch in The Wizard of Oz?",
+    option1: "Esmerelda",
+    option2: "Glinda",
+    option3: "Bella",
+    option4: "Elphaba",
+    answer: 2,
+}, {
+    question: "What is the surname of the children in The Chronicles of Narnia",
+    option1: "Thompson",
+    option2: "Williams",
+    option3: "Pevensie",
+    option4: "Davies",
+    answer: 3,
+}, {
+    question: "What is the name of the ship in Alien?",
+    option1: "Tardis",
+    option2: "Serenity",
+    option3: "Nostromo",
+    option4: "Galactica",
+    answer: 3,
+}, {
+    question: "What is the model of terminator in The Terminator?",
+    option1: "T-800",
+    option2: "T-101",
+    option3: "T-1000",
+    option4: "T-805",
+    answer: 1,
+}, {
+    question: "What does Will Smith say to the Alien he first encounters?",
+    option1: "'Them chicken legs bucaw'",
+    option2: "'We need to work on our communication'",
+    option3: "'Welcome to Earth'",
+    option4: "'I could have been at a barbecue'",
+    answer: 3,
+}, {
+    question: "Who plays Winston Zeddemore in Ghostbusters?",
+    option1: "Bill Murray",
+    option2: "Harold Ramis",
+    option3: "Dan Aykroyd",
+    option4: "Ernie Hudson",
+    answer: 4,
+}, {
+    question: "What major landmark appears in The Planet of the Apes?",
+    option1: "The Eiffel Tower",
+    option2: "The Statue of Liberty",
+    option3: "The Taj Mahal",
+    option4: "The Big Ben",
+    answer: 2,
+}, {
+    question: "What is the name of the company who designs RoboCop?",
+    option1: "Cyberdyne",
+    option2: "Blue Sun",
+    option3: "Omni Consumers Products",
+    option4: "Weyland-Yutani",
+    answer: 3,
+}]
+
 // Code adapted from the Love Maths Walkthrough for the function to execute when the DOM loads
 
 // document.addEventListener("DOMContentLoaded", function () {
