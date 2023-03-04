@@ -228,6 +228,78 @@ const animationQuestions = [{
     answer: 1,
 }]
 
+const comedyQuestions = [{
+    question: "Who plays Dale Doback in Stepbrothers?",
+    option1: "Will Ferrell",
+    option2: "John C. Reilly",
+    option3: "Seth Rogen",
+    option4: "Adam Scott",
+    answer: 2,
+}, {
+    question: "What is Bill Murray's profession in Groundhog Day?",
+    option1: "Lawyer",
+    option2: "Policeman",
+    option3: "Weatherman",
+    option4: "Accountant",
+    answer: 3,
+}, {
+    question: "Who plays Ron Burgundy's love interest in Anchorman?",
+    option1: "Elizabeth Banks",
+    option2: "Isla Fisher",
+    option3: "Amy Adams",
+    option4: "Christina Applegate",
+    answer: 4,
+}, {
+    question: "From the movie Elf which is the odd one out?",
+    option1: "Candy canes",
+    option2: "Caramel",
+    option3: "Candy corns",
+    option4: "Syrup",
+    answer: 2,
+}, {
+    question: "Who plays Cher in the 90s cult classic Clueless?",
+    option1: "Julia Stiles",
+    option2: "Reese Witherspoon",
+    option3: "Claire Danes",
+    option4: "Alicia Silverstone",
+    answer: 4,
+}, {
+    question: "Which Monty Python movie was released first",
+    option1: "The Life of Brian",
+    option2: "The Holy Grail",
+    option3: "Live at the Hollywood Bowl",
+    option4: "The Meaning of Life",
+    answer: 2,
+}, {
+    question: "In what decade was Jim Carrey born?",
+    option1: "40s",
+    option2: "60s",
+    option3: "70s",
+    option4: "50s",
+    answer: 2,
+}, {
+    question: "Who plays Winston Zeddemore in Ghostbusters?",
+    option1: "Bill Murray",
+    option2: "Harold Ramis",
+    option3: "Dan Aykroyd",
+    option4: "Ernie Hudson",
+    answer: 4,
+}, {
+    question: "What major landmark appears in The Planet of the Apes?",
+    option1: "The Eiffel Tower",
+    option2: "The Statue of Liberty",
+    option3: "The Taj Mahal",
+    option4: "The Big Ben",
+    answer: 2,
+}, {
+    question: "What is the name of the company who designs RoboCop?",
+    option1: "Cyberdyne",
+    option2: "Blue Sun",
+    option3: "Omni Consumers Products",
+    option4: "Weyland-Yutani",
+    answer: 3,
+}]
+
 // Code adapted from the Love Maths Walkthrough for the function to execute when the DOM loads
 
 // document.addEventListener("DOMContentLoaded", function () {
