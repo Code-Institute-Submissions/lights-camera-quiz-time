@@ -84,7 +84,7 @@ const scifiQuestions = [{
     answer: 3,
 }]
 
-const fantasyAdevntureQuestions = [{
+const fantasyAdventureQuestions = [{
     question: "How many rings of power were made in The Lord Of The Rings?",
     option1: "20",
     option2: "19",
@@ -302,43 +302,45 @@ const comedyQuestions = [{
 
 // Code adapted from the Love Maths Walkthrough for the function to execute when the DOM loads
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     let buttons = document.getElementsByTagName("button");
-//     for (let button of buttons) {
-//         button.addEventListener("click", function () {
-//             let gameType = this.getAttribute("data-type")
-//             if (gameType === "sci-fi") {
-//                 alert("You have chosen the scifi game")
-//                 runGame(gameType);
-//             } else {
-//                 alert(`You have chosen ${gameType}`)
-//             }
-//         })
-//     }
-// })
+document.addEventListener("DOMContentLoaded", function () {
+    let buttons = document.getElementsByTagName("button");
+    for (let button of buttons) {
+        button.addEventListener("click", function () {
+            let gameType = this.getAttribute("data-type")
+            if (gameType) {
+                alert(`You have chosen ${gameType}`)
+                runGame(gameType);
+            } else {
+                alert(`You have chosen an undefined game`)
+                throw `Error. Aborting.`
+            }
+        })
+    }
+})
 
 
-function runGame() {
+function runGame(gameType) {
     score = 0;
     questionCounter = 0;
-    availableQuestions = [...scifiQuestions];
-    displayScifiQuestion();
-    // if (gameType === "sci-fi") {
-    //     availableQuestions = [...scifiQuestions];
-    //     displayScifiQuestion();
-    // }
+    if (gameType === "sci-fi") {
+        availableQuestions = [...scifiQuestions];
+        displayQuestion();
+    } else if(gameType === "fantasy-adventure") {
+        availableQuestions = [...fantasyAdventureQuestions]
+        displayQuestion();
+    } else if (gameType === "comedy") {
+        availableQuestions = [...comedyQuestions]
+        displayQuestion();
+    }
 }
-console.log(runGame);
-runGame();
 
-function displayScifiQuestion() {
+function displayQuestion() {
 
     if(questionCounter >= maxQuestions || availableQuestions.length === 0) {
         return window.location.assign("index.html")
     }
 
     questionCounter++;
-    // availableQuestions = [...scifiQuestions];
 
     // calculate the value of the question index adapted from Brian Design Tutorial
 
@@ -349,7 +351,7 @@ function displayScifiQuestion() {
     // Details on the code used to display the question and 4 options was adapted from James Q Quick Youtube tutorial on building a Quiz App
 
     question.innerText = currentQuestion.question;
-    console.log(currentQuestion.question);
+    // console.log(currentQuestion.question);
 
     answers.forEach(function (option) {
         const number = option.dataset["number"];
@@ -367,24 +369,14 @@ answers.forEach(function (option) {
 
         // Checking to see whether the user's selected answer is correct
         const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
-        displayScifiQuestion();
+        displayQuestion();
     })
 })
-
-console.log(displayScifiQuestion)
 
 function checkAnswer() {
 
 }
 
 function incrementScore() {
-
-}
-
-function displayComedyQuestion() {
-
-}
-
-function displayFantasyAdventureQuestion() {
 
 }
