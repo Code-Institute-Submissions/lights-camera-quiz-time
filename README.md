@@ -146,18 +146,23 @@ The site is accessible [here]().
 
 ### Credits
 #### Code
-- 
-- 
-- 
+- [James Q Quick - Build a Quiz App](https://www.youtube.com/watch?v=zZdQGs62cR8&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=3)
+This walkthrough YouTube tutorial was used and adapted to write the iteration loops in the displayQuestion function to display the four options associated with each question and to add the loop to add the click event listener to register when a user makes their selected choice.
+- [4n4ru CIP2 Guessing Bee](https://github.com/4n4ru/CI-P2-GuessingBee/blob/master/assets/js/guessing-bee.js)
+This repository was used and adapted to toggle between the home screen and the game screen.
+- [Brian Design - How to Make a Quiz App using HTML, CSS & Javascript](https://www.youtube.com/watch?v=f4fB9Xg2JEY)
+This walkthrough Youtube tutorial was used and adapated for the hover effect over the buttons on the home screen and the option divs on the game screen. This walkthrough was also used to calculate the value of the question index in the JS file displayQuestion function and the design of the question bank array.
+- [The Love Maths Walkthrough Porject](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+2021_T1/courseware/2d651bf3f23e48aeb9b9218871912b2e/78f3c10a937c4fe09640c7c0098d16bd/)
+The walkthrough was used and adapted to write the function for when the DOM Content loads and for inspiration on how to use if else statements for the game to choose between a selection of data types and display the appropriate question herein.
 
 #### Content
-- 
+- All quiz questions and option were written by the developer.
 
 #### Media
-- 
+- The image file used as a background for the home screen and quiz screen was downloaded from Pexels and sourced by Pixabay.
 - 
 
 #### Acknowledgements
-- 
-- 
-- 
+- Thank you to my family for testing the site and providing feedback and support throughout the project.
+- Thank you to my mentor for the support, positivity and reassurance throughout the project.
+- Thank you to the facilitator for providing relevant resources and repositories to aid in the development of the project.
