@@ -20,28 +20,44 @@
     </header>
     <main>
 
-        <div class="categories">
-            <button class="btn" data-type="sci-fi" id="sci-fi"><a href="quiz.html">Sci-Fi <i class="fa-brands fa-reddit-alien"></i></a></button>
-            <button class="btn" data-type="sports" id="sports"><a href="quiz.html">Sports <i class="fa-solid fa-volleyball"></i></a></button>
-            <button class="btn" data-type="thriller-horror" id="thriller-horror"><a href="quiz.html">Thriller & Horror <i class="fa-solid fa-ghost"></i></a></button>
-            <button class="btn" data-type="animation" id="animation"><a href="quiz.html">Animation <i class="fa-solid fa-dog"></i></a></button>
-            <button class="btn" data-type="comedy" id="comedy"><a href="quiz.html">Comedy <i class="fa-solid fa-masks-theater"></i></a></button>
-            <button class="btn" data-type="fantasy-adventure" id="fantasy-adventure"><a href="quiz.html">Fantasy-Adventure <i class="fa-solid fa-dragon"></i></a></button>
-        </div>
-
-        <!-- <div class="score"></div>
-
-        <div class="game-area">
-            <div class="question-area"></div>
-            <div class="answer-area">
-                <span class="answer-box"></span>
-                <span class="answer-box"></span>
-                <span class="answer-box"></span>
-                <span class="answer-box"></span>
+        <div id="start-screen" class="categories">
+            <div id= "start-btns">
+            <button class="btn" data-type="sci-fi" id="sci-fi">Sci-Fi <i class="fa-brands fa-reddit-alien"></i></button>
+            <button class="btn" data-type="romance" id="romance">Sports <i class="fa-solid fa-volleyball"></i></button>
+            <button class="btn" data-type="thriller-horror" id="thriller-horror">Thriller & Horror <i class="fa-solid fa-ghost"></i></button>
+            <button class="btn" data-type="animation" id="animation">Animation <i class="fa-solid fa-dog"></i></button>
+            <button class="btn" data-type="comedy" id="comedy">Comedy <i class="fa-solid fa-masks-theater"></i></button>
+            <button class="btn" data-type="fantasy-adventure" id="fantasy-adventure">Fantasy-Adventure <i class="fa-solid fa-dragon"></i></button>
             </div>
         </div>
 
-        <div class="timer"></div> -->
+        <div class="score"></div>
+
+        <div id= "game-screen" class="game-area">
+            <div class="question-area">
+                <h2 id="question">What is the answer to this question?</h2>
+            </div>
+            <div class="answer-area">
+                <div class="answer-box">
+                    <p class="option-prefix">A</p>
+                    <p class="option-text" data-number="1" id="A">Option1</p>
+                </div>
+                <div class="answer-box">
+                    <p class="option-prefix">B</p>
+                    <p class="option-text" data-number="2" id="B">Option2</p>
+                </div>
+                <div class="answer-box">
+                    <p class="option-prefix">C</p>
+                    <p class="option-text" data-number="3" id="C">Option3</p>
+                </div>
+                <div class="answer-box">
+                    <p class="option-prefix">D</p>
+                    <p class="option-text" data-number="4" id="D">Option4</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="timer"></div>
     </main>
     <footer>
         <ul>

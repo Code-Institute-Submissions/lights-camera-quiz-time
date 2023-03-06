@@ -44,6 +44,13 @@ main {
     justify-content: center;
 }
 
+#start-btns {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
 .btn {
     /* display: inline-block; */
     width: 15rem;
@@ -215,11 +222,11 @@ footer i {
         padding: 0;
     } */
 
-    .btn {
+    /* .btn {
         min-height: 75px;
         width: 35%;
         margin: 0 auto;
-    }
+    } */
 
     /* .score, .timer, .game-area {
         height: auto;
