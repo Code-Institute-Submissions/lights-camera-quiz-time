@@ -6,6 +6,7 @@
     padding: 0;
     margin: 0;
     border: none;
+    box-sizing: border-box;
 }
 
 body {
@@ -28,7 +29,7 @@ main {
     color: #9E3D36;
     letter-spacing: 3px;
     font-weight: 600;
-    font-size: 200%;
+    font-size: 250%;
     text-align: center;
     padding: 10px;
 }
@@ -61,7 +62,7 @@ main {
     background-color: #DDA0A4;
     color: #9E3D36;
     font-weight: 600;
-    font-size: 120%;
+    font-size: 150%;
     /* display: flex;
     flex-direction: row;
     align-items: center;
@@ -257,6 +258,7 @@ footer i {
         font-weight: 600; */
         /* font-size: 130%; */
     }
+}
 
 
     /* Media queries for screen sizes of max width of 400px */
@@ -298,4 +300,11 @@ footer i {
         max-height: 15px;
         width: 75%;
     } */
+    }
+
+    @media screen and (min-width: 1100px) {
+        .btn {
+            width: 20rem;
+            height: 10rem;
+        }
     }
