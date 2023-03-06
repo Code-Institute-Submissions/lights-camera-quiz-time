@@ -300,6 +300,78 @@ const comedyQuestions = [{
     answer: 3,
 }]
 
+const horrorThrillerQuestions = [{
+    question: "Who produced the movie The Grudge?",
+    option1: "James Wan",
+    option2: "Mike Flanagan",
+    option3: "Sam Raimi",
+    option4: "George A. Romero",
+    answer: 3,
+}, {
+    question: "How many Screams movies are there?",
+    option1: "5",
+    option2: "6",
+    option3: "7",
+    option4: "8",
+    answer: 2,
+}, {
+    question: "What is the name of the demon antagonist in The Conjuring II?",
+    option1: "Azazel",
+    option2: "Valak",
+    option3: "Asmodeus",
+    option4: "Beelzebub",
+    answer: 2,
+}, {
+    question: "What is the name of the hospital for the criminally insane in Shutter Island?",
+    option1: "Ashecliffe",
+    option2: "Stonehearst",
+    option3: "Smith's Grove",
+    option4: "Claymoore",
+    answer: 1,
+}, {
+    question: "What is Jamie Lee Curtis's character called in Halloween?",
+    option1: "Lindsey Wallace",
+    option2: "Annie Brackett",
+    option3: "Judith Myers",
+    option4: "Laurie Strode",
+    answer: 4,
+}, {
+    question: "What is the name of the serial killer Clarice is hunting in The Silence of the Lambs?",
+    option1: "Zodiac Killer",
+    option2: "Candyman",
+    option3: "Buffalo Bill",
+    option4: "Mad Butcher",
+    answer: 2,
+}, {
+    question: "Which of these actors are not in The Sixth Sense?",
+    option1: "Abigail Breslin",
+    option2: "Toni Collette",
+    option3: "Bruce Willis",
+    option4: "Mischa Barton",
+    answer: 1,
+}, {
+    question: "Who plays the male lead in Get Out?",
+    option1: "Chadwick Boseman",
+    option2: "Winston Duke",
+    option3: "Daniel Kaluuya",
+    option4: "Lil Rey Howery",
+    answer: 3,
+}, {
+    question: "Who directed A Quiet Place Part I & II?",
+    option1: "Jon Favreau",
+    option2: "John Krasinski",
+    option3: "Jodie Foster",
+    option4: "Ben Affleck",
+    answer: 2,
+}, {
+    question: "How were the americans rescued from Tehran during the Iran Hostage crisis depicted in Argo?",
+    option1: "Using American fighter pilots",
+    option2: "Crossing the border in a armored truck",
+    option3: "Masquerading as actors in a sci-fi movie",
+    option4: "Hiding in an underground bunker",
+    answer: 3,
+}]
+
 // Code adapted from the Love Maths Walkthrough for the function to execute when the DOM loads
 
 document.addEventListener("DOMContentLoaded", function () {
