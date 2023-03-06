@@ -444,28 +444,11 @@ const romanceQuestions = [{
     answer: 2,
 }]
 
-// Code adapted from the Love Maths Walkthrough for the function to execute when the DOM loads
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     let buttons = document.getElementsByTagName("button");
-//     for (let button of buttons) {
-//         button.addEventListener("click", function () {
-//             let gameType = this.getAttribute("data-type")
-//             if (gameType) {
-//                 console.log(`You have chosen ${gameType}`)
-//                 runGame(gameType);
-//             } else {
-//                 alert(`You have chosen an undefined game`)
-//                 throw `Error. Aborting.`
-//             }
-//         })
-//     }
-// })
-
+// functions showScreen and toggleScreen adapted from 4n4ru Guessing Bee game
 function showScreen(id) {
-    let screenIds = ['start-screen', 'game-screen'];
-    for (const screenId of screenIds) {
-        toggleScreen(screenId, (screenId === id));
+    let screens = ['start-screen', 'game-screen'];
+    for (const screen of screens) {
+        toggleScreen(screen, (screen === id));
     }
 }
 
@@ -473,11 +456,12 @@ function toggleScreen(id, isActive) {
     document.getElementById(id).style.display = isActive ? 'flex' : 'none';
 }
 
+// Code adapted from the Love Maths Walkthrough for the function to execute when the DOM loads
+
 document.addEventListener('DOMContentLoaded', function () {
     showScreen('start-screen');
     document.getElementById('start-btns').addEventListener('click', function (event) {
-        // if (!event.target.className.includes('btn')) return; //makes sure event is only fired if a button is clicked
-        let button = event.target; //sets button to the element that fired the event
+        let button = event.target;
         let gameType = button.getAttribute('data-type');
         showScreen('game-screen');
         runGame(gameType);
