@@ -372,6 +372,78 @@ const horrorThrillerQuestions = [{
     answer: 3,
 }]
 
+const romanceQuestions = [{
+    question: "Who wrote 'Dear John', 'The Last Song' & 'The Notebook'?",
+    option1: "E. L. James",
+    option2: "Julia Quinn",
+    option3: "Kasuo Ishiguro",
+    option4: "Nikolas Sparks",
+    answer: 4,
+}, {
+    question: "What date did the Titanic set sail from Southampton?",
+    option1: "8th April 1912",
+    option2: "10th April 1912",
+    option3: "12th April 1912",
+    option4: "14th April 1912",
+    answer: 2,
+}, {
+    question: "Who plays Hilary Swank's late husband in PS I Love You?",
+    option1: "Clive Owen",
+    option2: "Jeffrey Dean Morgan",
+    option3: "Gerard Butler",
+    option4: "Russell Crowe",
+    answer: 3,
+}, {
+    question: "Who plays Hugh Grant's love interest in Love Actually?",
+    option1: "Keira Knightley",
+    option2: "Laura Linney",
+    option3: "Emma Thompson",
+    option4: "Martine McCutcheon",
+    answer: 4,
+}, {
+    question: "From the movie Moulin Rouge, which is the odd one out?",
+    option1: "'Come What May'",
+    option2: "'Children of the Revolution'",
+    option3: "'Elephant Love Medley'",
+    option4: "'When a Man Loves a Woman'",
+    answer: 4,
+}, {
+    question: "Who plays Katie Scarlet O Hara in Gone With the Wind?",
+    option1: "Vivien Leigh",
+    option2: "Grace Kelly",
+    option3: "Ingrid Bergman",
+    option4: "Joan Fontaine",
+    answer: 1,
+}, {
+    question: "In Pride & Prejudice what is the name of Mr Darcy's estate?",
+    option1: "Norland",
+    option2: "Rosings",
+    option3: "Netherfield Park",
+    option4: "Pemberley",
+    answer: 4,
+}, {
+    question: "Who plays Bruce Willis's daughter in Armageddon?",
+    option1: "Rachel Mc Adams",
+    option2: "Liv Tyler",
+    option3: "Kate Beckinsale",
+    option4: "Mandy Moore",
+    answer: 2,
+}, {
+    question: "What is the name of the indigenous race in Avatar?",
+    option1: "Na'vi",
+    option2: "Ewoks",
+    option3: "Jawas",
+    option4: "Twi'lek",
+    answer: 1,
+}, {
+    question: "In a Knight's Tale what name does William Thatcher use to enter the tournaments?",
+    option1: "Sir Adamar",
+    option2: "Sir Ulrich",
+    option3: "Sir Ector",
+    option4: "Sir Colville",
+    answer: 2,
+}]
+
 // Code adapted from the Love Maths Walkthrough for the function to execute when the DOM loads
 
 document.addEventListener("DOMContentLoaded", function () {
