@@ -515,6 +515,7 @@ function displayQuestion() {
     console.log(availableQuestions);
     acceptingAnswers = true;
     checkAnswer();
+    displayQuestion();
 }
 
 function checkAnswer() {
