@@ -1,4 +1,4 @@
-const maxQuestions = 10;
+const maxQuestions = 5;
 let score;
 let questionCounter;
 const question = document.getElementById("question");
@@ -537,6 +537,6 @@ function checkAnswer() {
     })
 }
 
-function incrementScore() {
+// function incrementScore() {
 
-}
+// }

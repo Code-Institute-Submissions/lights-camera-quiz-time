@@ -204,11 +204,11 @@ footer i {
 /* Styles to display to the user for correct and incorrect answers when clicked */
 
 .correct {
-    background-color: green;
+    background: linear-gradient(rgba(82, 247, 98, 0.9), rgba(24, 149, 34, 0.9))
 }
 
 .incorrect {
-    background-color: red;
+    background: linear-gradient(rgba(232, 35, 35, 0.9), rgba(222, 3, 3, 0.9))
 }
 
 /* Media queries for screen sizes of max width of 750px */
