@@ -1,9 +1,8 @@
-const maxQuestions = 5;
+const maxQuestions = 10;
 let score;
 let questionCounter;
 const question = document.getElementById("question");
 const answers = Array.from(document.querySelectorAll(".option-text"));
-console.log(answers);
 
 // lines 9 - 11 are taken from James Q Quick tutorial, more details in the README file
 let currentQuestion = {};
@@ -515,7 +514,6 @@ function displayQuestion() {
     console.log(availableQuestions);
     acceptingAnswers = true;
     checkAnswer();
-    displayQuestion();
 }
 
 function checkAnswer() {
