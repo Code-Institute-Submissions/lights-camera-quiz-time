@@ -4,6 +4,7 @@ const bonus = 10;
 let questionCounter = 0;
 const question = document.getElementById("question");
 const answers = Array.from(document.querySelectorAll(".option-text"));
+const scoreText = document.getElementById("score-text");
 
 // lines 9 - 11 are taken from James Q Quick tutorial, more details in the README file
 let currentQuestion = {};
@@ -546,7 +547,9 @@ function displayQuestion() {
     })
 
 function incrementScore(num) {
+    console.log(num);
     score += num;
-    document.getElementById("score-text").innertext = score;
-
+    console.log(score);
+    scoreText.textContent = score;
+    console.log(scoreText);
 }
