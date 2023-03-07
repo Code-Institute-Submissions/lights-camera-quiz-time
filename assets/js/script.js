@@ -513,12 +513,16 @@ function displayQuestion() {
     })
 
     // remove question used from array
-    availableQuestions.splice[questionIndex, 1];
+    console.log(questionIndex);
+    console.log(currentQuestion);
+    console.log(availableQuestions);
+    availableQuestions.splice(questionIndex, 1);
     console.log(availableQuestions);
 
     acceptingAnswers = true;
 };
 
+// iterate through the users choice
     answers.forEach(function (option) {
         option.addEventListener("click", function(event) {
             const userChoice = event.target;
