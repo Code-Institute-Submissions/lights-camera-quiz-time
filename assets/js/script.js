@@ -512,22 +512,26 @@ function displayQuestion() {
     })
 
     availableQuestions.splice[questionIndex, 1];
+    console.log(availableQuestions);
     acceptingAnswers = true;
+    checkAnswer();
 }
 
-answers.forEach(function (option) {
-    option.addEventListener("click", function(event) {
-        const selectedChoice = event.target;
-        const selectedAnswer = selectedChoice.dataset["number"];
-
-        // Checking to see whether the user's selected answer is correct
-        const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
-        displayQuestion();
-    })
-})
-
 function checkAnswer() {
-
+    answers.forEach(function (option) {
+        option.addEventListener("click", function(event) {
+            const userChoice = event.target;
+            const userAnswer = userChoice.dataset["number"];
+    
+            // Checking to see whether the user's answer is correct
+            const classToApply = userAnswer == currentQuestion.answer ? "correct" : "incorrect";
+            console.log(userAnswer, currentQuestion.answer);
+            console.log(classToApply);
+            userChoice.parentElement.classList.add(classToApply);
+            userChoice.parentElement.classList.remove(classToApply);
+            displayQuestion();
+        })
+    })
 }
 
 function incrementScore() {
