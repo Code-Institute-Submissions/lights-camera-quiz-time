@@ -1,6 +1,7 @@
 const maxQuestions = 5;
-let score;
-let questionCounter;
+let score = 0;
+const bonus = 10;
+let questionCounter = 0;
 const question = document.getElementById("question");
 const answers = Array.from(document.querySelectorAll(".option-text"));
 
@@ -11,7 +12,7 @@ let availableQuestions = [];
 
 // Design of question array adapated from How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project for Beginners Tutorial
 
-const scifiQuestions = [{
+let scifiQuestions = [{
     question: "Who is Luke Skywalker's father?",
     option1: "Han Solo",
     option2: "Lando Calrissian",
@@ -83,7 +84,7 @@ const scifiQuestions = [{
     answer: 3,
 }]
 
-const fantasyAdventureQuestions = [{
+let fantasyAdventureQuestions = [{
     question: "How many rings of power were made in The Lord Of The Rings?",
     option1: "20",
     option2: "19",
@@ -155,7 +156,7 @@ const fantasyAdventureQuestions = [{
     answer: 4,
 }]
 
-const animationQuestions = [{
+let animationQuestions = [{
     question: "What is Belle's fathers' name in Beauty & The Beast?",
     option1: "Gaston",
     option2: "Adam",
@@ -227,7 +228,7 @@ const animationQuestions = [{
     answer: 1,
 }]
 
-const comedyQuestions = [{
+let comedyQuestions = [{
     question: "Who plays Dale Doback in Stepbrothers?",
     option1: "Will Ferrell",
     option2: "John C. Reilly",
@@ -299,7 +300,7 @@ const comedyQuestions = [{
     answer: 3,
 }]
 
-const horrorThrillerQuestions = [{
+let horrorThrillerQuestions = [{
     question: "Who produced the movie The Grudge?",
     option1: "James Wan",
     option2: "Mike Flanagan",
@@ -371,7 +372,7 @@ const horrorThrillerQuestions = [{
     answer: 3,
 }]
 
-const romanceQuestions = [{
+let romanceQuestions = [{
     question: "Who wrote 'Dear John', 'The Last Song' & 'The Notebook'?",
     option1: "E. L. James",
     option2: "Julia Quinn",
@@ -505,18 +506,19 @@ function displayQuestion() {
     question.innerText = currentQuestion.question;
     // console.log(currentQuestion.question);
 
+    // display each of the four options
     answers.forEach(function (option) {
         const number = option.dataset["number"];
         option.innerText = currentQuestion["option" + number];
     })
 
+    // remove question used from array
     availableQuestions.splice[questionIndex, 1];
     console.log(availableQuestions);
-    acceptingAnswers = true;
-    checkAnswer();
-}
 
-function checkAnswer() {
+    acceptingAnswers = true;
+};
+
     answers.forEach(function (option) {
         option.addEventListener("click", function(event) {
             const userChoice = event.target;
@@ -524,8 +526,11 @@ function checkAnswer() {
     
             // Checking to see whether the user's answer is correct
             const classToApply = userAnswer == currentQuestion.answer ? "correct" : "incorrect";
-            console.log(userAnswer, currentQuestion.answer);
-            console.log(classToApply);
+
+            if(classToApply === "correct") {
+                incrementScore(bonus);
+            }
+
             // Adding green and red backgrounds to the user selected answers
             userChoice.parentElement.classList.add(classToApply);
             // Using the timeout function to remove the background color applied after 500ms
@@ -535,8 +540,9 @@ function checkAnswer() {
         }, 500);
         })
     })
+
+function incrementScore(num) {
+    score += num;
+    document.getElementById("score-text").innertext = score;
+
 }
-
-// function incrementScore() {
-
-// }
