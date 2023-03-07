@@ -527,9 +527,13 @@ function checkAnswer() {
             const classToApply = userAnswer == currentQuestion.answer ? "correct" : "incorrect";
             console.log(userAnswer, currentQuestion.answer);
             console.log(classToApply);
+            // Adding green and red backgrounds to the user selected answers
             userChoice.parentElement.classList.add(classToApply);
+            // Using the timeout function to remove the background color applied after 500ms
+            setTimeout( function() {
             userChoice.parentElement.classList.remove(classToApply);
             displayQuestion();
+        }, 500);
         })
     })
 }
