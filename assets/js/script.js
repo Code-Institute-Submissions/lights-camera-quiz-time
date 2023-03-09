@@ -342,8 +342,8 @@ let horrorThrillerQuestions = [{
     option1: "Zodiac Killer",
     option2: "Candyman",
     option3: "Buffalo Bill",
-    option4: "Mad Butcher",
-    answer: 2,
+    option4: "Black Hood",
+    answer: 3,
 }, {
     question: "Which of these actors are not in The Sixth Sense?",
     option1: "Abigail Breslin",
@@ -366,9 +366,9 @@ let horrorThrillerQuestions = [{
     option4: "Ben Affleck",
     answer: 2,
 }, {
-    question: "How were the americans rescued from Tehran during the Iran Hostage crisis depicted in Argo?",
+    question: "How do the Americans escape from Iran in Argo?",
     option1: "Using American fighter pilots",
-    option2: "Crossing the border in a armored truck",
+    option2: "Crossing the border in an armored truck",
     option3: "Masquerading as actors in a sci-fi movie",
     option4: "Hiding in an underground bunker",
     answer: 3,
@@ -417,7 +417,7 @@ let romanceQuestions = [{
     option4: "Joan Fontaine",
     answer: 1,
 }, {
-    question: "In Pride & Prejudice what is the name of Mr Darcy's estate?",
+    question: "In Pride & Prejudice, what is the name of Mr Darcy's estate?",
     option1: "Norland",
     option2: "Rosings",
     option3: "Netherfield Park",
