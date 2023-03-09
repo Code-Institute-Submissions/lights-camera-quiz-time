@@ -102,7 +102,7 @@ footer i {
 
 /* styles for game question and answer box area for the quiz.html file*/
 
-.score {
+/* .score {
     width: 15%;
     height: 2rem;
     display: flex;
@@ -112,19 +112,24 @@ footer i {
     margin: 0 auto;
     /* border: 1px solid black; */
     /* background-color: black; */
-    padding: 10px;
+    /* padding: 10px;
     font-size: 130%;
-}
+} */
 
-.game-area {
+#game-screen {
     width: 75%;
-    /* border: 1px solid black; */
-    height: 75vh;
-    margin: 0 auto;
+    height: vh;
     display: flex;
+    flex-direction: column;
+}
+.game-area {
+    width: 100%;
+    border: 1px solid black;
+    height: 60vh;
+    margin: 0 10rem;
+    /* display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    /* justify-content: space-around; */
+    justify-content: center; */
 }
 
 /* adapated css flex styling from lines 154 - 157 from 80s Mixtape Quiz style.css file*/
@@ -147,7 +152,7 @@ footer i {
 
 .answer-area {
     width: 100%;
-    height: 50vh;
+    height: 40vh;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -162,7 +167,7 @@ footer i {
     width: 20rem;
     border: 1px solid black;
     /*background-color: blue; */
-    border-radius: 15px;
+    border-radius: 12px;
     background-color: #DDA0A4;
     display: flex;
     flex-direction: row;
@@ -171,9 +176,9 @@ footer i {
 
 .answer-box:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 #DDA0A4;
+    box-shadow: 0 0.5rem 1.5rem 0 #DDA0A4;
     transition: transform 150ms;
-    transform: scale(1.03);
+    transform: scale(1.05);
 }
 
 .option-prefix {
@@ -197,23 +202,20 @@ footer i {
 
 #heads-up-display {
     width: vw;
-    height: 10rem;
+    height: 5rem;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .question-count {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    
 }
 
 .score {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-}
+    
+} 
 
 .timer {
     width: 15%;
