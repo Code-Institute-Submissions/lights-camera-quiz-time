@@ -537,7 +537,7 @@ function displayQuestion() {
                 incrementScore(bonus);
             }
 
-            questionCountText.textContent = `${questionCounter}/${maxQuestions}`
+            questionCountText.textContent = `${questionCounter + 1}/${maxQuestions}`
 
             // Adding green and red backgrounds to the user selected answers
             userChoice.parentElement.classList.add(classToApply);
