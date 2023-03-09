@@ -195,6 +195,26 @@ footer i {
     font-size: 150%;
 }
 
+#heads-up-display {
+    width: vw;
+    height: 10rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.question-count {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.score {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
 .timer {
     width: 15%;
     height: 15px;

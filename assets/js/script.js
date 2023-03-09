@@ -5,6 +5,7 @@ let questionCounter = 0;
 const question = document.getElementById("question");
 const answers = Array.from(document.querySelectorAll(".option-text"));
 const scoreText = document.getElementById("score-text");
+const questionCountText = document.getElementById("question-count-text");
 
 // lines 9 - 11 are taken from James Q Quick tutorial, more details in the README file
 let currentQuestion = {};
@@ -535,6 +536,8 @@ function displayQuestion() {
             if(classToApply === "correct") {
                 incrementScore(bonus);
             }
+
+            questionCountText.textContent = `${questionCounter}/${maxQuestions}`
 
             // Adding green and red backgrounds to the user selected answers
             userChoice.parentElement.classList.add(classToApply);

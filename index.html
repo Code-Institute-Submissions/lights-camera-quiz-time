@@ -21,40 +21,54 @@
     <main>
 
         <div id="start-screen" class="categories">
-            <div id= "start-btns">
-            <button class="btn" data-type="sci-fi" id="sci-fi">Sci-Fi <i class="fa-brands fa-reddit-alien"></i></button>
-            <button class="btn" data-type="romance" id="romance">Romance <i class="fa-solid fa-face-grin-hearts"></i></button>
-            <button class="btn" data-type="thriller-horror" id="thriller-horror">Thriller & Horror <i class="fa-solid fa-ghost"></i></button>
-            <button class="btn" data-type="animation" id="animation">Animation <i class="fa-solid fa-dog"></i></button>
-            <button class="btn" data-type="comedy" id="comedy">Comedy <i class="fa-solid fa-masks-theater"></i></button>
-            <button class="btn" data-type="fantasy-adventure" id="fantasy-adventure">Fantasy-Adventure <i class="fa-solid fa-dragon"></i></button>
+            <div id="start-btns">
+                <button class="btn" data-type="sci-fi" id="sci-fi">Sci-Fi <i
+                        class="fa-brands fa-reddit-alien"></i></button>
+                <button class="btn" data-type="romance" id="romance">Romance <i
+                        class="fa-solid fa-face-grin-hearts"></i></button>
+                <button class="btn" data-type="thriller-horror" id="thriller-horror">Thriller & Horror <i
+                        class="fa-solid fa-ghost"></i></button>
+                <button class="btn" data-type="animation" id="animation">Animation <i
+                        class="fa-solid fa-dog"></i></button>
+                <button class="btn" data-type="comedy" id="comedy">Comedy <i
+                        class="fa-solid fa-masks-theater"></i></button>
+                <button class="btn" data-type="fantasy-adventure" id="fantasy-adventure">Fantasy-Adventure <i
+                        class="fa-solid fa-dragon"></i></button>
             </div>
         </div>
 
-        <div class="score">
-            <span id="score-text">0</span>
-        </div>
-
-        <div id= "game-screen" class="game-area">
-            <div class="question-area">
-                <h2 id="question">What is the answer to this question?</h2>
+        <div id="game-screen">
+            <div id="heads-up-display">
+                <div class="question-count">
+                    <p>Question:</p>
+                    <span id="question-count-text">1/5</span>
+                </div>
+                <div class="score">
+                    <p>Score:</p>
+                    <span id="score-text">0</span>
+                </div>
             </div>
-            <div class="answer-area">
-                <div class="answer-box">
-                    <p class="option-prefix">A</p>
-                    <p class="option-text" data-number="1" id="A">Option1</p>
+            <div class="game-area">
+                <div class="question-area">
+                    <h2 id="question">What is the answer to this question?</h2>
                 </div>
-                <div class="answer-box">
-                    <p class="option-prefix">B</p>
-                    <p class="option-text" data-number="2" id="B">Option2</p>
-                </div>
-                <div class="answer-box">
-                    <p class="option-prefix">C</p>
-                    <p class="option-text" data-number="3" id="C">Option3</p>
-                </div>
-                <div class="answer-box">
-                    <p class="option-prefix">D</p>
-                    <p class="option-text" data-number="4" id="D">Option4</p>
+                <div class="answer-area">
+                    <div class="answer-box">
+                        <p class="option-prefix">A</p>
+                        <p class="option-text" data-number="1" id="A">Option1</p>
+                    </div>
+                    <div class="answer-box">
+                        <p class="option-prefix">B</p>
+                        <p class="option-text" data-number="2" id="B">Option2</p>
+                    </div>
+                    <div class="answer-box">
+                        <p class="option-prefix">C</p>
+                        <p class="option-text" data-number="3" id="C">Option3</p>
+                    </div>
+                    <div class="answer-box">
+                        <p class="option-prefix">D</p>
+                        <p class="option-text" data-number="4" id="D">Option4</p>
+                    </div>
                 </div>
             </div>
         </div>
