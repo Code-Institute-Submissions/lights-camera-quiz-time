@@ -311,4 +311,8 @@ footer i {
             width: 20rem;
             height: 10rem;
         }
+        
+        .answer-box {
+            width: 25rem;
+        }
     }
