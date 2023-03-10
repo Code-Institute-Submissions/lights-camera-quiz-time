@@ -97,7 +97,8 @@ footer li {
 
 footer i {
     color: #9E3D36;
-    font-size: 200%;
+    font-size: 250%;
+    padding: 10px;
 }
 
 /* styles for game question and answer box area for the quiz.html file*/
@@ -294,6 +295,10 @@ footer i {
         font-weight: 600; */
         /* font-size: 130%; */
     }
+
+    .game-area h2, p {
+        font-size: 120%;
+    }
 }
 
 
@@ -334,6 +339,10 @@ footer i {
     .btn {
         width: 7rem;
         font-size: 120%;
+    }
+
+    .game-area h2, p {
+        font-size: 100%;
     }
 }
 
