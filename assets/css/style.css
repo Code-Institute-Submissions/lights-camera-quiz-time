@@ -281,6 +281,10 @@ footer i {
     #game-screen, .game-area {
         height: 35rem;
     }
+
+    .question-area {
+        height: 8rem;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -298,6 +302,10 @@ footer i {
 
     .game-area h2, p {
         font-size: 120%;
+    }
+
+    .question-count, .score {
+        width: 9rem;
     }
 }
 
@@ -336,13 +344,13 @@ footer i {
 }
 
 @media screen and (max-width: 340px) {
-    .btn {
-        width: 7rem;
-        font-size: 120%;
-    }
-
+    
     .game-area h2, p {
         font-size: 100%;
+    }
+
+    footer i {
+        font-size: 200%;
     }
 }
 
