@@ -280,6 +280,11 @@ form {
     font-family: 'Work Sans';
 }
 
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    transform: none;
+}
+
 form a {
     display: flex;
     align-items: center;
