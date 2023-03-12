@@ -492,6 +492,7 @@ function runGame(gameType) {
 function displayQuestion() {
 
     if(questionCounter >= maxQuestions || availableQuestions.length === 0) {
+        localStorage.setItem("mostRecentScore", score);
         return window.location.assign("high-score.html")
     }
 
@@ -559,6 +560,7 @@ function incrementScore(num) {
 
 const username = getElementById("username");
 const saveScoreBtn = getElementById("saveScore");
+const mostRecentScore = localStorage.getItem("mostRecentScore");
 
 username.addEventListener("keyup", function() {
     console.log(username.value);
