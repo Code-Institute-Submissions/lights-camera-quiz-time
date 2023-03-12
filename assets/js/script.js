@@ -1,4 +1,4 @@
-const maxQuestions = 1;
+const maxQuestions = 5;
 let score = 0;
 const bonus = 10;
 let questionCounter = 0;
@@ -559,9 +559,9 @@ function incrementScore(num) {
 }
 
 const username = getElementById("username");
-const saveScoreBtn = getElementById("saveScore");
+const saveScoreBtn = getElementById("save-score");
 const mostRecentScore = localStorage.getItem("mostRecentScore");
-const finalScore = getElementById("finalScore");
+const finalScore = getElementById("final-score");
 
 finalScore.textContent = mostRecentScore;
 
@@ -591,6 +591,6 @@ function saveHighScore(event) {
 
     localStorage.setItem("highScore", JSON.stringify(highScores));
 
-    window.location.assign(index.html);
+    window.location.assign("index.html");
     console.log(highScores);
 }
