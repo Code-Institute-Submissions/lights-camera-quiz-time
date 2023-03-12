@@ -278,6 +278,8 @@ form {
     font-size: 3rem;
     justify-content: center;
     font-family: 'Work Sans';
+    margin: 1rem 0;
+    height: 8rem;
 }
 
 .btn[disabled]:hover {
@@ -292,11 +294,12 @@ form a {
 
 input {
     padding: 1.5rem;
-    box-shadow: 0 1rem 1.5rem 0 #9E3D36;
+    box-shadow: 0 1rem 1.5rem 0 rgba(193, 48, 48, 0.5);
 }
 
 input::placeholder {
     font-size: 2rem;
+    padding: 1rem;
 }
 
 #username {
@@ -312,7 +315,7 @@ input::placeholder {
 
 #final-score {
     font-size: 2rem;
-    padding-top: 1rem;
+    margin: 1rem 0;
 }
 
 /* Media queries for screen sizes of max width of 750px */

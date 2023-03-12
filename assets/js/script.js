@@ -556,3 +556,8 @@ function incrementScore(num) {
     scoreText.textContent = score;
     console.log(scoreText);
 }
+
+function saveHighScore(event) {
+    console.log("You have clicked the save button");
+    event.preventDefault();
+}
