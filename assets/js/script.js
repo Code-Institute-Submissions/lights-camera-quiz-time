@@ -568,6 +568,7 @@ finalScore.textContent = mostRecentScore;
 // The method to save the high scores was adapted from James Q Quick tutorial
 
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+const maxHighScores = 5;
 
 username.addEventListener("keyup", function() {
     console.log(username.value);
@@ -584,6 +585,8 @@ function saveHighScore(event) {
     highScores.push(score);
 
     // sorting the array line of code taken from James Q Quick
-    highScores.sort( (a,b) => b.score - a.score)
+    highScores.sort( (a,b) => b.score - a.score);
+
+    highScores.splice(5);
     console.log(highScores);
 }
