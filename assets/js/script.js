@@ -561,6 +561,13 @@ function incrementScore(num) {
 const username = getElementById("username");
 const saveScoreBtn = getElementById("saveScore");
 const mostRecentScore = localStorage.getItem("mostRecentScore");
+const finalScore = getElementById("finalScore");
+
+finalScore.textContent = mostRecentScore;
+
+// The method to save the high scores was adapted from James Q Quick tutorial
+
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
 username.addEventListener("keyup", function() {
     console.log(username.value);
@@ -569,4 +576,11 @@ username.addEventListener("keyup", function() {
 function saveHighScore(event) {
     console.log("You have clicked the save button");
     event.preventDefault();
+
+    const score = {
+        score: mostRecentScore,
+        name: username.value
+    };
+    highScores.push(score);
+    console.log(highScores);
 }
