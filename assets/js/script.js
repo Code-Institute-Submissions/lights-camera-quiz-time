@@ -1,4 +1,4 @@
-const maxQuestions = 5;
+const maxQuestions = 1;
 let score = 0;
 const bonus = 10;
 let questionCounter = 0;
@@ -492,7 +492,7 @@ function runGame(gameType) {
 function displayQuestion() {
 
     if(questionCounter >= maxQuestions || availableQuestions.length === 0) {
-        return window.location.assign("index.html")
+        return window.location.assign("high-score.html")
     }
 
     questionCounter++;

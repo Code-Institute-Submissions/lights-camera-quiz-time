@@ -112,8 +112,8 @@ footer i {
     text-align: center;
     margin: 0 auto;
     /* border: 1px solid black; */
-    /* background-color: black; */
-    /* padding: 10px;
+/* background-color: black; */
+/* padding: 10px;
     font-size: 130%;
 } */
 
@@ -125,6 +125,7 @@ footer i {
     /* border: 1px solid red; */
     margin: 0 auto;
 }
+
 .game-area {
     width: 75%;
     /* border: 1px solid black; */
@@ -212,7 +213,8 @@ footer i {
     justify-content: space-around;
 }
 
-.question-count, .score {
+.question-count,
+.score {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -243,6 +245,69 @@ footer i {
 
 .incorrect {
     background: linear-gradient(rgba(232, 35, 35, 0.9), rgba(222, 3, 3, 0.9))
+}
+
+/*styles for high scores end screen */
+
+/* #end-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+} */
+
+#end-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30rem;
+    font-size: 2rem;
+}
+
+#end-page .btn {
+    text-align: center;
+    font-size: 3rem;
+    justify-content: center;
+    font-family: 'Work Sans';
+}
+
+form a {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    padding: 1.5rem;
+    box-shadow: 0 1rem 1.5rem 0 #9E3D36;
+}
+
+input::placeholder {
+    font-size: 2rem;
+}
+
+#username {
+    width: 20rem;
+    margin: 0 auto;
+}
+
+#end-text {
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+#final-score {
+    font-size: 2rem;
+    padding-top: 1rem;
 }
 
 /* Media queries for screen sizes of max width of 750px */
@@ -278,7 +343,8 @@ footer i {
         max-height: 7vh;
         width: 75%;
     } */
-    #game-screen, .game-area {
+    #game-screen,
+    .game-area {
         height: 35rem;
     }
 
@@ -300,12 +366,23 @@ footer i {
         /* font-size: 130%; */
     }
 
-    .game-area h2, p {
+    .game-area h2,
+    p {
         font-size: 120%;
     }
 
-    .question-count, .score {
+    .question-count,
+    .score {
         width: 9rem;
+    }
+
+    #end-page .btn {
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    #end-text {
+        width: 20rem;
     }
 }
 
@@ -337,15 +414,16 @@ footer i {
     .question-area {
         height: 10rem;
     }
-    
+
     .answer-box {
         width: 15rem;
     }
 }
 
 @media screen and (max-width: 340px) {
-    
-    .game-area h2, p {
+
+    .game-area h2,
+    p {
         font-size: 100%;
     }
 

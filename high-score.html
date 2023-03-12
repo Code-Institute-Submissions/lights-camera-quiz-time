@@ -21,15 +21,15 @@
     <main>
 
         <div id="end-screen">
-                <div id="end-page">
-                    <h1 id="final-score">0</h1>
-                    <h2>Enter your name below to save your score</h2>
+            <div id="end-page">
+                <h1 id="final-score">0</h1>
+                <form action="">
+                    <h2 id="end-text">Enter your name below to save your score</h2>
                     <input type="text" name="name" id="username" placeholder="Enter your name">
-                    <button class="btn" type="submit" onclick="saveHighScore(event)">Save</button>
-                </div>
-                <div>
-                    <a href="index.html">Home </a>
-                </div>
+                    <button class="btn" type="submit" onclick="saveHighScore(event)" id="saveScore">Save</button>
+                    <a href="index.html" class="btn">Home <i class="fa-solid fa-house-chimney"></i></a>
+                </form>
+            </div>
         </div>
     </main>
     <footer>
