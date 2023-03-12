@@ -588,5 +588,9 @@ function saveHighScore(event) {
     highScores.sort( (a,b) => b.score - a.score);
 
     highScores.splice(5);
+
+    localStorage.setItem("highScore", JSON.stringify(highScores));
+
+    window.location.assign(index.html);
     console.log(highScores);
 }
