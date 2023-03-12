@@ -557,6 +557,13 @@ function incrementScore(num) {
     console.log(scoreText);
 }
 
+const username = getElementById("username");
+const saveScoreBtn = getElementById("saveScore");
+
+username.addEventListener("keyup", function() {
+    console.log(username.value);
+    saveScoreBtn.disabled = !username.value;
+})
 function saveHighScore(event) {
     console.log("You have clicked the save button");
     event.preventDefault();
