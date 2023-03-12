@@ -582,5 +582,8 @@ function saveHighScore(event) {
         name: username.value
     };
     highScores.push(score);
+
+    // sorting the array line of code taken from James Q Quick
+    highScores.sort( (a,b) => b.score - a.score)
     console.log(highScores);
 }
