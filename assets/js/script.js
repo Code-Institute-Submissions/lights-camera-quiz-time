@@ -464,7 +464,7 @@ let romanceQuestions = [{
 
 // functions showScreen and toggleScreen adapted from 4n4ru Guessing Bee game
 function showScreen(id) {
-    let screens = ['start-screen', 'game-screen', 'end-screen'];
+    let screens = ['start-screen', 'game-screen', 'end-screen', 'high-scores-screen'];
     for (const screen of screens) {
         toggleScreen(screen, (screen === id));
     }
@@ -619,6 +619,10 @@ function saveHighScore(event) {
 
     localStorage.setItem("highScores", JSON.stringify(highScores));
 
-    showScreen('start-screen');
+    showScreen('high-scores-screen');
     // console.log(highScores);
 }
+
+// code to display the highscores
+const highScoresList = document.getElementById("high-scores-list");
+highScoresList.textContent = highScores;
