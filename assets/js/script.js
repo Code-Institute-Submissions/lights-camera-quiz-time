@@ -576,18 +576,20 @@ function incrementScore(num) {
     finalScore.textContent = score;
 }
 
+// javascript code to display the final score to the user and give them the option to save their score
 const username = document.getElementById("username");
 const saveScoreBtn = document.getElementById("save-score");
 
 const mostRecentScore = localStorage.getItem("mostRecentScore");
 const finalScore = document.getElementById("final-score");
 
-finalScore.textContent = mostRecentScore;
-console.log(mostRecentScore);
+// finalScore.textContent = mostRecentScore;
+// console.log(mostRecentScore);
 
 // The method to save the high scores was adapted from James Q Quick tutorial
 
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+console.log(highScores);
 const maxHighScores = 5;
 
 username.addEventListener("keyup", function () {
