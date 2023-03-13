@@ -154,6 +154,10 @@ This repository was used and adapted to toggle between the home screen and the g
 This walkthrough Youtube tutorial was used and adapated for the hover effect over the buttons on the home screen and the option divs on the game screen. This walkthrough was also used to calculate the value of the question index in the JS file displayQuestion function and the design of the question bank array.
 - [The Love Maths Walkthrough Porject](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+2021_T1/courseware/2d651bf3f23e48aeb9b9218871912b2e/78f3c10a937c4fe09640c7c0098d16bd/)
 The walkthrough was used and adapted to write the function for when the DOM Content loads and for inspiration on how to use if else statements for the game to choose between a selection of data types and display the appropriate question herein.
+- [How to Read a JSON File in JavaScript](https://www.freecodecamp.org/news/how-to-read-json-file-in-javascript/)
+This code in this document was used and adapted to fetch the JSON file with the quiz questions and access these question in the JS file specifically in the runGame function.
+- [All Things JavaScript LLC Accessing JSON data](https://www.youtube.com/watch?v=Pb-8DzAObmg)
+This YouTube tutorial was useful in troubleshooting and fetching the quiz questions and ensuring all questions were being assigned to the correct variables.
 
 #### Content
 - All quiz questions and option were written by the developer.

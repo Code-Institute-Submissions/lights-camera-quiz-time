@@ -5,7 +5,7 @@ let mainObj = {};
 //     console.log(mainObj.scifiQuestions);
 // }
 
-// code to fetch json file adapted from freecodecamp.org
+// code to fetch json file adapted from freecodecamp.org and All things JavaScript tutorial
 fetch('./quiz.json')
     .then((response) => response.json())
     .then(function (data) {
