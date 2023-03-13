@@ -493,11 +493,13 @@ function displayQuestion() {
 
     if(questionCounter >= maxQuestions || availableQuestions.length === 0) {
         localStorage.setItem("mostRecentScore", score);
-        showScreen('end-screen');
+        return showScreen('end-screen');
         // return window.location.assign("high-score.html")
     }
 
     questionCounter++;
+
+    questionCountText.textContent = `${questionCounter}/${maxQuestions}`
 
     // calculate the value of the question index adapted from Brian Design Tutorial
 
@@ -539,8 +541,6 @@ function displayQuestion() {
                 incrementScore(bonus);
             }
 
-            questionCountText.textContent = `${questionCounter}/${maxQuestions}`
-
             // Adding green and red backgrounds to the user selected answers
             userChoice.parentElement.classList.add(classToApply);
             // Using the timeout function to remove the background color applied after 500ms
@@ -557,10 +557,12 @@ function incrementScore(num) {
     console.log(score);
     scoreText.textContent = score;
     // console.log(scoreText);
+    finalScore.textContent = score;
 }
 
 const username = document.getElementById("username");
 const saveScoreBtn = document.getElementById("save-score");
+
 const mostRecentScore = localStorage.getItem("mostRecentScore");
 const finalScore = document.getElementById("final-score");
 
@@ -595,6 +597,6 @@ function saveHighScore(event) {
 
     localStorage.setItem("highScores", JSON.stringify(highScores));
 
-    window.location.assign("index.html");
+    // window.location.assign("index.html");
     console.log(highScores);
 }
