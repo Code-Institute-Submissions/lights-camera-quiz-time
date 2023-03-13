@@ -448,7 +448,7 @@ let romanceQuestions = [{
 
 // functions showScreen and toggleScreen adapted from 4n4ru Guessing Bee game
 function showScreen(id) {
-    let screens = ['start-screen', 'game-screen'];
+    let screens = ['start-screen', 'game-screen', 'end-screen'];
     for (const screen of screens) {
         toggleScreen(screen, (screen === id));
     }
@@ -493,7 +493,8 @@ function displayQuestion() {
 
     if(questionCounter >= maxQuestions || availableQuestions.length === 0) {
         localStorage.setItem("mostRecentScore", score);
-        return window.location.assign("high-score.html")
+        showScreen('end-screen');
+        // return window.location.assign("high-score.html")
     }
 
     questionCounter++;
@@ -516,11 +517,11 @@ function displayQuestion() {
     })
 
     // remove question used from array
-    console.log(questionIndex);
-    console.log(currentQuestion);
-    console.log(availableQuestions);
+    // console.log(questionIndex);
+    // console.log(currentQuestion);
+    // console.log(availableQuestions);
     availableQuestions.splice(questionIndex, 1);
-    console.log(availableQuestions);
+    // console.log(availableQuestions);
 
     acceptingAnswers = true;
 };
@@ -538,7 +539,7 @@ function displayQuestion() {
                 incrementScore(bonus);
             }
 
-            questionCountText.textContent = `${questionCounter + 1}/${maxQuestions}`
+            questionCountText.textContent = `${questionCounter}/${maxQuestions}`
 
             // Adding green and red backgrounds to the user selected answers
             userChoice.parentElement.classList.add(classToApply);
@@ -551,19 +552,20 @@ function displayQuestion() {
     })
 
 function incrementScore(num) {
-    console.log(num);
+    // console.log(num);
     score += num;
     console.log(score);
     scoreText.textContent = score;
-    console.log(scoreText);
+    // console.log(scoreText);
 }
 
-const username = getElementById("username");
-const saveScoreBtn = getElementById("save-score");
+const username = document.getElementById("username");
+const saveScoreBtn = document.getElementById("save-score");
 const mostRecentScore = localStorage.getItem("mostRecentScore");
-const finalScore = getElementById("final-score");
+const finalScore = document.getElementById("final-score");
 
 finalScore.textContent = mostRecentScore;
+console.log(mostRecentScore);
 
 // The method to save the high scores was adapted from James Q Quick tutorial
 
@@ -574,22 +576,24 @@ username.addEventListener("keyup", function() {
     console.log(username.value);
     saveScoreBtn.disabled = !username.value;
 })
+
 function saveHighScore(event) {
     console.log("You have clicked the save button");
     event.preventDefault();
 
-    const score = {
+    const totalScore = {
         score: mostRecentScore,
         name: username.value
     };
-    highScores.push(score);
+    highScores.push(totalScore);
+    console.log(totalScore);
 
     // sorting the array line of code taken from James Q Quick
-    highScores.sort( (a,b) => b.score - a.score);
+    highScores.sort( (a,b) => b.totalScore - a.totalScore);
 
     highScores.splice(5);
 
-    localStorage.setItem("highScore", JSON.stringify(highScores));
+    localStorage.setItem("highScores", JSON.stringify(highScores));
 
     window.location.assign("index.html");
     console.log(highScores);
