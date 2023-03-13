@@ -1,3 +1,20 @@
+// import data from './quiz.json' assert { type: 'JSON' };
+let scifiQuestions = [];
+let mainObj = {};
+let showObj = function() {
+    for(let prop in mainObj) {
+        console.log(prop);
+        console.log(mainObj[prop]);
+    }
+}
+
+fetch('./quiz.json')
+.then((response) => response.json())
+.then(function(data) {console.log(data);
+    mainObj = data;
+    showObj();
+});
+
 const maxQuestions = 5;
 let score = 0;
 const bonus = 10;
@@ -14,77 +31,77 @@ let availableQuestions = [];
 
 // Design of question array adapated from How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project for Beginners Tutorial
 
-let scifiQuestions = [{
-    question: "Who is Luke Skywalker's father?",
-    option1: "Han Solo",
-    option2: "Lando Calrissian",
-    option3: "Darth Vader",
-    option4: "Obi-Wan Kenobi",
-    answer: 3,
-}, {
-    question: "What year does Marty McFly travel to in Back to the Future?",
-    option1: "1985",
-    option2: "2015",
-    option3: "1885",
-    option4: "1955",
-    answer: 4,
-}, {
-    question: "Who plays the character Morpheus in The Matrix?",
-    option1: "Laurence Fishburne",
-    option2: "Samuel L. Jackson",
-    option3: "Cuba Gooding Jr",
-    option4: "Will Smith",
-    answer: 1,
-}, {
-    question: "Name the first actor to play Captain James T. Kirk?",
-    option1: "Chris Pine",
-    option2: "Leonard Nimoy",
-    option3: "William Shatner",
-    option4: "Patrick Stewart",
-    answer: 3,
-}, {
-    question: "What is the name of the ship in Alien?",
-    option1: "Tardis",
-    option2: "Serenity",
-    option3: "Nostromo",
-    option4: "Galactica",
-    answer: 3,
-}, {
-    question: "What is the model of terminator in The Terminator?",
-    option1: "T-800",
-    option2: "T-101",
-    option3: "T-1000",
-    option4: "T-805",
-    answer: 1,
-}, {
-    question: "What does Will Smith say to the Alien he first encounters in Independence Day?",
-    option1: "'Them chicken legs bucaw'",
-    option2: "'We need to work on our communication'",
-    option3: "'Welcome to Earth'",
-    option4: "'I could have been at a barbecue'",
-    answer: 3,
-}, {
-    question: "Who plays Winston Zeddemore in Ghostbusters?",
-    option1: "Bill Murray",
-    option2: "Harold Ramis",
-    option3: "Dan Aykroyd",
-    option4: "Ernie Hudson",
-    answer: 4,
-}, {
-    question: "What major landmark appears in The Planet of the Apes?",
-    option1: "The Eiffel Tower",
-    option2: "The Statue of Liberty",
-    option3: "The Taj Mahal",
-    option4: "The Big Ben",
-    answer: 2,
-}, {
-    question: "What is the name of the company who designs RoboCop?",
-    option1: "Cyberdyne",
-    option2: "Blue Sun",
-    option3: "Omni Consumers Products",
-    option4: "Weyland-Yutani",
-    answer: 3,
-}]
+// let scifiQuestions = [{
+//     question: "Who is Luke Skywalker's father?",
+//     option1: "Han Solo",
+//     option2: "Lando Calrissian",
+//     option3: "Darth Vader",
+//     option4: "Obi-Wan Kenobi",
+//     answer: 3,
+// }, {
+//     question: "What year does Marty McFly travel to in Back to the Future?",
+//     option1: "1985",
+//     option2: "2015",
+//     option3: "1885",
+//     option4: "1955",
+//     answer: 4,
+// }, {
+//     question: "Who plays the character Morpheus in The Matrix?",
+//     option1: "Laurence Fishburne",
+//     option2: "Samuel L. Jackson",
+//     option3: "Cuba Gooding Jr",
+//     option4: "Will Smith",
+//     answer: 1,
+// }, {
+//     question: "Name the first actor to play Captain James T. Kirk?",
+//     option1: "Chris Pine",
+//     option2: "Leonard Nimoy",
+//     option3: "William Shatner",
+//     option4: "Patrick Stewart",
+//     answer: 3,
+// }, {
+//     question: "What is the name of the ship in Alien?",
+//     option1: "Tardis",
+//     option2: "Serenity",
+//     option3: "Nostromo",
+//     option4: "Galactica",
+//     answer: 3,
+// }, {
+//     question: "What is the model of terminator in The Terminator?",
+//     option1: "T-800",
+//     option2: "T-101",
+//     option3: "T-1000",
+//     option4: "T-805",
+//     answer: 1,
+// }, {
+//     question: "What does Will Smith say to the Alien he first encounters in Independence Day?",
+//     option1: "'Them chicken legs bucaw'",
+//     option2: "'We need to work on our communication'",
+//     option3: "'Welcome to Earth'",
+//     option4: "'I could have been at a barbecue'",
+//     answer: 3,
+// }, {
+//     question: "Who plays Winston Zeddemore in Ghostbusters?",
+//     option1: "Bill Murray",
+//     option2: "Harold Ramis",
+//     option3: "Dan Aykroyd",
+//     option4: "Ernie Hudson",
+//     answer: 4,
+// }, {
+//     question: "What major landmark appears in The Planet of the Apes?",
+//     option1: "The Eiffel Tower",
+//     option2: "The Statue of Liberty",
+//     option3: "The Taj Mahal",
+//     option4: "The Big Ben",
+//     answer: 2,
+// }, {
+//     question: "What is the name of the company who designs RoboCop?",
+//     option1: "Cyberdyne",
+//     option2: "Blue Sun",
+//     option3: "Omni Consumers Products",
+//     option4: "Weyland-Yutani",
+//     answer: 3,
+// }]
 
 let fantasyAdventureQuestions = [{
     question: "How many rings of power were made in The Lord Of The Rings?",
@@ -474,7 +491,7 @@ function runGame(gameType) {
     score = 0;
     questionCounter = 0;
     if (gameType === "sci-fi") {
-        availableQuestions = [...scifiQuestions];
+        availableQuestions = [scifiQuestions];
     } else if(gameType === "fantasy-adventure") {
         availableQuestions = [...fantasyAdventureQuestions]
     } else if (gameType === "comedy") {
