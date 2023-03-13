@@ -1,19 +1,18 @@
 // import data from './quiz.json' assert { type: 'JSON' };
-let scifiQuestions = [];
 let mainObj = {};
-let showObj = function() {
-    for(let prop in mainObj) {
-        console.log(prop);
-        console.log(mainObj[prop]);
-    }
-}
 
+// let showObj = function () {
+//     console.log(mainObj.scifiQuestions);
+// }
+
+// code to fetch json file adapted from freecodecamp.org
 fetch('./quiz.json')
-.then((response) => response.json())
-.then(function(data) {console.log(data);
-    mainObj = data;
-    showObj();
-});
+    .then((response) => response.json())
+    .then(function (data) {
+        // console.log(data);
+        mainObj = data;
+        // showObj();
+    });
 
 const maxQuestions = 5;
 let score = 0;
@@ -484,15 +483,15 @@ document.addEventListener('DOMContentLoaded', function () {
         let gameType = button.getAttribute('data-type');
         showScreen('game-screen');
         runGame(gameType);
-})
+    })
 })
 
 function runGame(gameType) {
     score = 0;
     questionCounter = 0;
     if (gameType === "sci-fi") {
-        availableQuestions = [scifiQuestions];
-    } else if(gameType === "fantasy-adventure") {
+        availableQuestions = mainObj.scifiQuestions;
+    } else if (gameType === "fantasy-adventure") {
         availableQuestions = [...fantasyAdventureQuestions]
     } else if (gameType === "comedy") {
         availableQuestions = [...comedyQuestions]
@@ -508,7 +507,7 @@ function runGame(gameType) {
 
 function displayQuestion() {
 
-    if(questionCounter >= maxQuestions || availableQuestions.length === 0) {
+    if (questionCounter >= maxQuestions || availableQuestions.length === 0) {
         localStorage.setItem("mostRecentScore", score);
         return showScreen('end-screen');
         // return window.location.assign("high-score.html")
@@ -546,27 +545,27 @@ function displayQuestion() {
 };
 
 // iterate through the users choice
-    answers.forEach(function (option) {
-        option.addEventListener("click", function(event) {
-            const userChoice = event.target;
-            const userAnswer = userChoice.dataset["number"];
-    
-            // Checking to see whether the user's answer is correct
-            const classToApply = userAnswer == currentQuestion.answer ? "correct" : "incorrect";
+answers.forEach(function (option) {
+    option.addEventListener("click", function (event) {
+        const userChoice = event.target;
+        const userAnswer = userChoice.dataset["number"];
 
-            if(classToApply === "correct") {
-                incrementScore(bonus);
-            }
+        // Checking to see whether the user's answer is correct
+        const classToApply = userAnswer == currentQuestion.answer ? "correct" : "incorrect";
 
-            // Adding green and red backgrounds to the user selected answers
-            userChoice.parentElement.classList.add(classToApply);
-            // Using the timeout function to remove the background color applied after 500ms
-            setTimeout( function() {
+        if (classToApply === "correct") {
+            incrementScore(bonus);
+        }
+
+        // Adding green and red backgrounds to the user selected answers
+        userChoice.parentElement.classList.add(classToApply);
+        // Using the timeout function to remove the background color applied after 500ms
+        setTimeout(function () {
             userChoice.parentElement.classList.remove(classToApply);
             displayQuestion();
         }, 500);
-        })
     })
+})
 
 function incrementScore(num) {
     // console.log(num);
@@ -591,7 +590,7 @@ console.log(mostRecentScore);
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 const maxHighScores = 5;
 
-username.addEventListener("keyup", function() {
+username.addEventListener("keyup", function () {
     console.log(username.value);
     saveScoreBtn.disabled = !username.value;
 })
@@ -608,7 +607,7 @@ function saveHighScore(event) {
     console.log(totalScore);
 
     // sorting the array line of code taken from James Q Quick
-    highScores.sort( (a,b) => b.totalScore - a.totalScore);
+    highScores.sort((a, b) => b.totalScore - a.totalScore);
 
     highScores.splice(5);
 
