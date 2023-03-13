@@ -593,7 +593,7 @@ console.log(highScores);
 const maxHighScores = 5;
 
 username.addEventListener("keyup", function () {
-    console.log(username.value);
+    // console.log(username.value);
     saveScoreBtn.disabled = !username.value;
 })
 
@@ -602,19 +602,23 @@ function saveHighScore(event) {
     event.preventDefault();
 
     const totalScore = {
-        score: mostRecentScore,
+        totalScore: score,
         name: username.value
     };
-    highScores.push(totalScore);
-    console.log(totalScore);
 
-    // sorting the array line of code taken from James Q Quick
-    highScores.sort((a, b) => b.totalScore - a.totalScore);
+    console.log(totalScore);
+    
+    highScores.push(totalScore);
+
+    // Line 616 of code to sort the array of highscores taken from James Q Quick
+    highScores.sort( (a, b) => b.totalScore - a.totalScore);
 
     highScores.splice(5);
 
+    console.log(highScores);
+
     localStorage.setItem("highScores", JSON.stringify(highScores));
 
-    // window.location.assign("index.html");
-    console.log(highScores);
+    showScreen('start-screen');
+    // console.log(highScores);
 }

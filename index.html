@@ -79,13 +79,18 @@
                 <form action="">
                     <!-- <h2 id="end-text">Enter your name below to save your score</h2> -->
                     <input type="text" name="name" id="username" placeholder="Enter your name">
-                    <button class="btn" type="submit" onclick="saveHighScore(event)" id="save-score" disabled>Save</button>
+                    <button class="btn" type="submit" onclick="saveHighScore(event)" id="save-score"
+                        disabled>Save</button>
                     <a href="index.html" class="btn">Home <i class="fa-solid fa-house-chimney"></i></a>
                 </form>
             </div>
         </div>
 
-        <!-- <div class="timer"></div> -->
+        <div id="high-scores-screen">
+            <h1 id="high-scores-title">High Scores</h1>
+            <ul id="high-scores-list"></ul>
+            <a href="index.html">Home <i class="fa-solid fa-house-chimney"></i></a>
+        </div>
     </main>
     <footer>
         <ul>
@@ -100,7 +105,7 @@
         </ul>
     </footer>
     <script src="https://kit.fontawesome.com/b9e601c9ec.js" crossorigin="anonymous"></script>
-    <script src="assets/js/script.js" type="module"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
