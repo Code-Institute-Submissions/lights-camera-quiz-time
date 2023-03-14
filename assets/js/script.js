@@ -1,18 +1,18 @@
 // import data from './quiz.json' assert { type: 'JSON' };
-let mainObj = {};
 
 // let showObj = function () {
 //     console.log(mainObj.scifiQuestions);
 // }
 
-// code to fetch json file adapted from freecodecamp.org and All things JavaScript tutorial
-fetch('./quiz.json')
-    .then((response) => response.json())
-    .then(function (data) {
-        // console.log(data);
-        mainObj = data;
-        // showObj();
-    });
+// code to fetch json file adapted from freecodecamp.org and All Things JavaScript YouTube tutorial
+let mainObj = {};
+// fetch('./quiz.json')
+//     .then((response) => response.json())
+//     .then(function (data) {
+//         // console.log(data);
+//         mainObj = data;
+//         // showObj();
+//     });
 
 const maxQuestions = 5;
 let score = 0;
@@ -478,6 +478,12 @@ function toggleScreen(id, isActive) {
 
 document.addEventListener('DOMContentLoaded', function () {
     showScreen('start-screen');
+    fetch('./quiz.json')
+    .then((response) => response.json())
+    .then(function (data) {
+        // console.log(data);
+        mainObj = data;
+    });
     document.getElementById('start-btns').addEventListener('click', function (event) {
         let button = event.target;
         let gameType = button.getAttribute('data-type');
@@ -580,7 +586,7 @@ function incrementScore(num) {
 const username = document.getElementById("username");
 const saveScoreBtn = document.getElementById("save-score");
 
-const mostRecentScore = localStorage.getItem("mostRecentScore");
+// const mostRecentScore = localStorage.getItem("mostRecentScore");
 const finalScore = document.getElementById("final-score");
 
 // finalScore.textContent = mostRecentScore;
