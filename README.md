@@ -134,11 +134,17 @@ First Time Users
 
 ### Bugs
 #### Solved Bugs
-- 
-- 
+- ![JSON file not loading](assets/images/json-import-bug.png)
+The import method was used at the top of the js file to import the quiz questions from the json file ![import code](assets/images/json-import-code.png). This code caused the home screen, game screen and end screens to all display at once when the site loaded. The following error displayed on the console ![Import method console error](assets/images/json-import-console-error.png). To rectify this error I used the fetch() method to import the quiz questions from the json file and this solved the bug and the screens displayed as expected.
+- ![If statement for when a user completes the max questions](assets/images/error-max-questions-if-statement.png)
+Initally when setting the if statement for what happens when the user completed the max number of questions I had set a condition as when the max questions are greater than or equal to 5 and this caused the screen to load and re load continuously without stopping. I realised that I needed to write the condition as it the question counter constant was greater than or equal to 5. Using the max questions this condition would be met before any question loaded as the max questions was set to a constant of 5.
+- ![The most recent score displaying for the current score](assets/images/recent-score-bug.png)
+When a user completes the quiz their score incrememnts correctly in the heads up display however when they are navigated to the end screen where their score is displayed the most recent score displayed is the previous score instead of their most recent score. The initial code used was ![Code to display most recent score on end page](assets/images/recent-score-code.png). I changed the .textContent to equal score instead of mostRecentScore which fixed the bug for the current user.
+
 
 #### Unsolved Bugs
-- 
+- ![Quiz questions not displaying as json file not fully loaded](assets/images/question-not-loading.png)
+When the available questions varibale is set to the scifiquestions property from the json file it takes time to fetch the questions and if the user clicks the scifi category before the DOM fully loads the questions do not display.
 - 
 
 ### Deployment
