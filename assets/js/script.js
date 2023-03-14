@@ -607,11 +607,11 @@ function saveHighScore(event) {
     };
 
     console.log(totalScore);
-    
+
     highScores.push(totalScore);
 
     // Line 616 of code to sort the array of highscores taken from James Q Quick
-    highScores.sort( (a, b) => b.totalScore - a.totalScore);
+    highScores.sort((a, b) => b.totalScore - a.totalScore);
 
     highScores.splice(5);
 
@@ -620,9 +620,10 @@ function saveHighScore(event) {
     localStorage.setItem("highScores", JSON.stringify(highScores));
 
     showScreen('high-scores-screen');
-    // console.log(highScores);
 }
 
 // code to display the highscores
 const highScoresList = document.getElementById("high-scores-list");
-highScoresList.textContent = highScores;
+highScoresList.innerHTML = highScores.map(score => {
+    return `<li>${score.name} - ${score.score}</li>`;
+}).join("");
