@@ -97,7 +97,7 @@ footer li {
 
 footer i {
     color: #9E3D36;
-    font-size: 250%;
+    font-size: 2rem;
     padding: 10px;
 }
 
@@ -150,8 +150,9 @@ footer i {
     border: 1px solid black; */
     margin: 0 auto;
     font-size: 150%;
-    border: 1px solid black;
-    border-radius: 15px;
+    border: 1px solid #9E3D36;
+    /* border-radius: 15px; */
+    font-weight: bold;
 }
 
 .answer-area {
@@ -169,13 +170,14 @@ footer i {
 .answer-box {
     height: 5rem;
     width: 20rem;
-    border: 1px solid black;
+    border: 1px solid #9E3D36;
     /*background-color: blue; */
     border-radius: 12px;
     background-color: #DDA0A4;
     display: flex;
     flex-direction: row;
     align-items: center;
+    font-weight: bold;
 }
 
 .answer-box:hover {
@@ -240,11 +242,11 @@ footer i {
 /* Styles to display to the user for correct and incorrect answers when clicked */
 
 .correct {
-    background: linear-gradient(rgba(82, 247, 98, 0.9), rgba(24, 149, 34, 0.9))
+    background: linear-gradient(rgba(170, 231, 176, 0.9), rgba(115, 229, 124, 0.9))
 }
 
 .incorrect {
-    background: linear-gradient(rgba(232, 35, 35, 0.9), rgba(222, 3, 3, 0.9))
+    background: linear-gradient(rgba(243, 124, 124, 0.9), rgba(237, 82, 82, 0.9))
 }
 
 /*styles for high scores end screen */
@@ -314,8 +316,9 @@ input::placeholder {
 }
 
 #final-score {
-    font-size: 2rem;
+    font-size: 3rem;
     margin: 1rem 0;
+    font-weight: bold;
 }
 
 /* styles for the high scores screen */
@@ -446,11 +449,20 @@ input::placeholder {
             margin: 0 auto;
         } */
 
+    .heading {
+        font-size: 2rem;
+    }
+
+    #start-btns {
+        padding: 1rem;
+    }
+
     .btn {
-        /* font-size: 100%; */
-        /* font-weight: 600; */
-        width: 8rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        width: 9rem;
         height: 8rem;
+        margin: 0 auto;
     }
 
     /* .score, .timer, .game-area {
@@ -468,6 +480,10 @@ input::placeholder {
     #high-scores-screen .btn {
         font-size: 2rem;
     }
+
+    footer i {
+        font-size: 1.5rem;
+    }
 }
 
 @media screen and (max-width: 340px) {
@@ -477,8 +493,10 @@ input::placeholder {
         font-size: 100%;
     }
 
-    footer i {
-        font-size: 200%;
+    .btn {
+        width: 7rem;
+        height: 7rem;
+        font-size: 1rem;
     }
 }
 
