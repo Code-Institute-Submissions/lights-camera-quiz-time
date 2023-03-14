@@ -37,9 +37,9 @@ I used [Fontjoy](https://fontjoy.com/) to choose a pairing of the fonts. I choos
 The popcorn image was sourced from [Pixabay](https://pixabay.com/) from [Pexels](https://www.pexels.com/) [Image Source](https://www.pexels.com/photo/food-snack-popcorn-movie-theater-33129/).
 
 #### Wireframes
-- Home Screen
-- Game Screen
-- Leaderboard Screen
+- ![Home Screen and Game Screen on Mobile](assets/images/movie-quiz-mobile.png)
+- ![Home Screen and Game Screen on Tablet](assets/images/movie-quiz-tablet.png)
+- ![Home Screen and Game Screen on Desktop](assets/images/movie-quiz-desktop.png)
 
 ### Existing Features
 - ![Heading](assets/images/heading.png)
@@ -91,9 +91,10 @@ The high scores screen displays the top 5 results including the score and the us
 - Github was used for storing the site after being pushed from Gitpod and for deploying the site.
 
 ### Future Features
-- 
-- 
-- 
+- ![Contact Us Page](assets/images/future-feature-contact.png)
+I would like to include a contact us page with the option for users to input their name and email and they can send a query to the author regarding the site. This provides value to the user as they can provide feedback if they wish to the author on the level of difficulty of the questions included in the site and they can provide feedback on their experience navigating the site and any provide suggestions or improvements they feel would improve the site.
+- I would like to include a high scores page for each of the six categories and include a bar chart showing which of the categories has the highest scores and which did users find the most difficult.
+- I would like to include additional categories to include questions on the war, crime and sports genres.
 
 ### Validation and Testing
 [W3C HTML Validator](https://validator.w3.org/#validate_by_input)
