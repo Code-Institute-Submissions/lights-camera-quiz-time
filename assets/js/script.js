@@ -625,5 +625,5 @@ function saveHighScore(event) {
 // code to display the highscores
 const highScoresList = document.getElementById("high-scores-list");
 highScoresList.innerHTML = highScores.map(score => {
-    return `<li>${score.name} - ${score.score}</li>`;
+    return `<li class="high-scores-list">${score.name} - ${score.score}</li>`;
 }).join("");

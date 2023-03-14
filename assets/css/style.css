@@ -318,6 +318,38 @@ input::placeholder {
     margin: 1rem 0;
 }
 
+/* styles for the high scores screen */
+#high-scores-screen {
+    width: vw;
+    height: vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#high-scores-title {
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 1rem;
+}
+
+.high-scores-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#high-scores-screen .btn {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 2.5rem;
+    margin: 0 auto;
+}
+
 /* Media queries for screen sizes of max width of 750px */
 
 @media screen and (max-width: 850px) {
@@ -425,6 +457,10 @@ input::placeholder {
 
     .answer-box {
         width: 15rem;
+    }
+
+    #high-scores-screen .btn {
+        font-size: 2rem;
     }
 }
 
