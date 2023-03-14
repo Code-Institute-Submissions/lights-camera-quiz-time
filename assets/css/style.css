@@ -333,12 +333,17 @@ input::placeholder {
 }
 
 .high-scores-list {
+    width: 15rem;
+    margin: 0 auto;
     list-style-type: none;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-size: 2rem;
+    font-weight: bold;
+    background-color: #DDA0A4;
+    border: 1px solid #9E3D36;
 }
 
 #high-scores-screen .btn {
@@ -348,6 +353,7 @@ input::placeholder {
     align-items: center;
     font-size: 2.5rem;
     margin: 0 auto;
+    height: 8rem;
 }
 
 /* Media queries for screen sizes of max width of 750px */
