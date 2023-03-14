@@ -602,7 +602,7 @@ function saveHighScore(event) {
     event.preventDefault();
 
     const totalScore = {
-        totalScore: score,
+        score: score,
         name: username.value
     };
 
@@ -611,7 +611,7 @@ function saveHighScore(event) {
     highScores.push(totalScore);
 
     // Line 616 of code to sort the array of highscores taken from James Q Quick
-    highScores.sort((a, b) => b.totalScore - a.totalScore);
+    highScores.sort((a, b) => b.score - a.score);
 
     highScores.splice(5);
 
