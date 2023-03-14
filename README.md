@@ -42,12 +42,20 @@ The popcorn image was sourced from [Pixabay](https://pixabay.com/) from [Pexels]
 - Leaderboard Screen
 
 ### Existing Features
-- Heading
-- Category Buttons
-- Footer
-- Timer
-- Game Section
-- Score Section
+- ![Heading](assets/images/heading.png)
+The heading displays the title of the movie quiz to the user and has an anchor embedded that when clicked the user returns to the home screen. This provides value to the user as the user can return to the home page with ease from any of the screens.
+- ![Category Buttons](assets/images/categories-buttons.png)
+There are siz categories for the user to choose from. This provides value to the user as many different genres of film are included for the user to choose from. Each of the buttons has a transition hover effect that evokes a positive visual response from the user.
+- ![Footer](assets/images/footer-icons.png)
+There are links to social media sites for the user to interact with. The links open in an external tab which removes the necessity to click the back button. The inclusion of this feature provides value to the user as they can access the author's social media page to gain insight into the author and confirm the site is a credible and reliable source.
+- ![Game Section](assets/images/game-area.png)
+Once the user choses a category they are navigated to the game screen where there is a question and 4 possible options displated to the user. This provides value as the user has options to aid them in answering the question. The addition of the green and red background colors for correct and incorrect selected answers provides the user with a visual stimulus and indication of their progress with the quiz.
+- ![Heads-Up-Display](assets/images/heads-up-display.png)
+The heads up display includes the question the user is currently on and displays the score to the user. The score implements when a user gets a correct answer which is also signified by the temporary green background color which display on the answer box selected. This provides value to the user as it is clear the number of questions they have completed and whether they were successful in answering the questions in the chosen category.
+- ![End Screen with Form](assets/images/end-screen.png)
+When the user completes the max number of questions they are navigated to the end screen where their score is displayed. The user has the option to complete the form input with their name and save their result or they have the option to return to the home screen and choose another category. If the user chooses to save their score they are then naviagted to a high scores screen where the top 5 high scores are displayed. This provides value to the user as they have the option to save their score if they are happy with their result and encourages competition amongst users to achieve the highest possible score.
+- ![High scores screen](assets/images/high-scores-screen.png)
+The high scores screen displays the top 5 results including the score and the user who achieved the score. The current user can view the results and determine if they have been successful to reach the high scores board. There is also a home button where the user can return to the categories home screen. This screen provides value as it gives a sense of achievement to users.
 
 ### Acessibility
 - Using semantic header, main and footer elements to aid screen readers.
