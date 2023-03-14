@@ -19,7 +19,7 @@
         </a>
     </header>
     <main>
-
+        <!-- Home screen with six movie category buttons -->
         <div id="start-screen" class="categories">
             <div id="start-btns">
                 <button class="btn" data-type="sci-fi" id="sci-fi">Sci-Fi <i
@@ -37,7 +37,10 @@
             </div>
         </div>
 
+        <!-- The game screen with the heads up display and game area -->
         <div id="game-screen">
+
+            <!-- The heads up display includes the user's current question and score -->
             <div id="heads-up-display">
                 <div class="question-count">
                     <p>Question:</p>
@@ -48,6 +51,8 @@
                     <span id="score-text">0</span>
                 </div>
             </div>
+
+            <!-- The game area includes a question box and 4 possible option boxes -->
             <div class="game-area">
                 <div class="question-area">
                     <h2 id="question">What is the answer to this question?</h2>
@@ -73,11 +78,11 @@
             </div>
         </div>
 
+        <!-- The end screen displays the users score and provides the option for the user to save their score -->
         <div id="end-screen">
             <div id="end-page">
                 <h1 id="final-score">0</h1>
-                <form action="">
-                    <!-- <h2 id="end-text">Enter your name below to save your score</h2> -->
+                <form>
                     <input type="text" name="name" id="username" placeholder="Enter your name">
                     <button class="btn" type="submit" onclick="saveHighScore(event)" id="save-score"
                         disabled>Save</button>
@@ -86,12 +91,15 @@
             </div>
         </div>
 
+        <!-- The high scores screen displays the top user scores and includes a home button -->
         <div id="high-scores-screen">
             <h1 id="high-scores-title">High Scores <i class="fa-solid fa-trophy"></i></h1>
             <ul id="high-scores-list"></ul>
             <a href="index.html" class="btn">Home <i class="fa-solid fa-house-chimney"></i></a>
         </div>
     </main>
+
+    <!-- The footer element contains external links to Instagram, IMDB and YouTube -->
     <footer>
         <ul>
             <li><a href="https://www.youtube.com/" target="_blank" rel="noopener"
