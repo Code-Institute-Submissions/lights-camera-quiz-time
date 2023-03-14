@@ -1,19 +1,4 @@
-// import data from './quiz.json' assert { type: 'JSON' };
-
-// let showObj = function () {
-//     console.log(mainObj.scifiQuestions);
-// }
-
-// code to fetch json file adapted from freecodecamp.org and All Things JavaScript YouTube tutorial
 let mainObj = {};
-// fetch('./quiz.json')
-//     .then((response) => response.json())
-//     .then(function (data) {
-//         // console.log(data);
-//         mainObj = data;
-//         // showObj();
-//     });
-
 const maxQuestions = 5;
 let score = 0;
 const bonus = 10;
@@ -475,13 +460,13 @@ function toggleScreen(id, isActive) {
 }
 
 // Code adapted from the Love Maths Walkthrough for the function to execute when the DOM loads
+// code to fetch json file adapted from freecodecamp.org and All Things JavaScript YouTube tutorial
 
 document.addEventListener('DOMContentLoaded', function () {
     showScreen('start-screen');
     fetch('./quiz.json')
     .then((response) => response.json())
     .then(function (data) {
-        // console.log(data);
         mainObj = data;
     });
     document.getElementById('start-btns').addEventListener('click', function (event) {
@@ -516,7 +501,6 @@ function displayQuestion() {
     if (questionCounter >= maxQuestions || availableQuestions.length === 0) {
         localStorage.setItem("mostRecentScore", score);
         return showScreen('end-screen');
-        // return window.location.assign("high-score.html")
     }
 
     questionCounter++;
@@ -541,11 +525,7 @@ function displayQuestion() {
     })
 
     // remove question used from array
-    // console.log(questionIndex);
-    // console.log(currentQuestion);
-    // console.log(availableQuestions);
     availableQuestions.splice(questionIndex, 1);
-    // console.log(availableQuestions);
 
     acceptingAnswers = true;
 };
@@ -565,6 +545,7 @@ answers.forEach(function (option) {
 
         // Adding green and red backgrounds to the user selected answers
         userChoice.parentElement.classList.add(classToApply);
+
         // Using the timeout function to remove the background color applied after 500ms
         setTimeout(function () {
             userChoice.parentElement.classList.remove(classToApply);
@@ -574,11 +555,8 @@ answers.forEach(function (option) {
 })
 
 function incrementScore(num) {
-    // console.log(num);
     score += num;
-    console.log(score);
     scoreText.textContent = score;
-    // console.log(scoreText);
     finalScore.textContent = score;
 }
 
@@ -586,25 +564,23 @@ function incrementScore(num) {
 const username = document.getElementById("username");
 const saveScoreBtn = document.getElementById("save-score");
 
-// const mostRecentScore = localStorage.getItem("mostRecentScore");
 const finalScore = document.getElementById("final-score");
 
-// finalScore.textContent = mostRecentScore;
-// console.log(mostRecentScore);
-
-// The method to save the high scores was adapted from James Q Quick tutorial
+// Code to save the high scores
+// Using json.parse and json.parse and the method used to save the high scores was adapted from James Q Quick tutorialcredited to the James Q Quick tutorial
 
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-console.log(highScores);
 const maxHighScores = 5;
 
+// Code to ensure the user cannot click save unless they have entered a username in the form input field
+
 username.addEventListener("keyup", function () {
-    // console.log(username.value);
     saveScoreBtn.disabled = !username.value;
 })
 
+// The function that executes when a user clicks the save button
+
 function saveHighScore(event) {
-    console.log("You have clicked the save button");
     event.preventDefault();
 
     const totalScore = {
@@ -612,20 +588,22 @@ function saveHighScore(event) {
         name: username.value
     };
 
-    console.log(totalScore);
+    // Add each score and username to the high scores array
 
     highScores.push(totalScore);
 
-    // Line 616 of code to sort the array of highscores taken from James Q Quick
+    // Line 596 of code to sort the array of highscores taken from James Q Quick
     highScores.sort((a, b) => b.score - a.score);
 
+    // Code to remove the lowest score
     highScores.splice(5);
 
-    console.log(highScores);
+    // highscores saved in local storage and accessed from the applications tab
 
     localStorage.setItem("highScores", JSON.stringify(highScores));
 
-    // code to display the highscores adapated from James Q Quick tutorial
+    // code to display the highscores using the map method adapated from James Q Quick tutorial
+
     const highScoresList = document.getElementById("high-scores-list");
     highScoresList.innerHTML = highScores.map(score => {
         return `<li class="high-scores-list">${score.name} - ${score.score}</li>`;
