@@ -19,8 +19,6 @@ body {
 main {
     background: url("../images/popcorn.jpg") no-repeat center center;
     background-size: cover;
-    height: vh;
-    width: vw;
 }
 
 /* Styles for the main heading on each screen */
@@ -37,7 +35,6 @@ main {
 /* Design styles for the categories area on the home screen with 6 buttons for user to click on*/
 
 .categories {
-    width: vw;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -98,7 +95,6 @@ footer i {
 
 #game-screen {
     width: 100%;
-    height: vh;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -106,7 +102,6 @@ footer i {
 
 .game-area {
     width: 75%;
-    height: vh;
     margin: 0 auto;
 }
 
@@ -272,8 +267,6 @@ input::placeholder {
 /* styles for the high scores screen */
 
 #high-scores-screen {
-    width: vw;
-    height: vh;
     display: flex;
     flex-direction: column;
 }
