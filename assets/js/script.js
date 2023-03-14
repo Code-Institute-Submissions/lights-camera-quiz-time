@@ -619,11 +619,11 @@ function saveHighScore(event) {
 
     localStorage.setItem("highScores", JSON.stringify(highScores));
 
+    // code to display the highscores adapated from James Q Quick tutorial
+    const highScoresList = document.getElementById("high-scores-list");
+    highScoresList.innerHTML = highScores.map(score => {
+        return `<li class="high-scores-list">${score.name} - ${score.score}</li>`;
+    }).join("");
+
     showScreen('high-scores-screen');
 }
-
-// code to display the highscores
-const highScoresList = document.getElementById("high-scores-list");
-highScoresList.innerHTML = highScores.map(score => {
-    return `<li class="high-scores-list">${score.name} - ${score.score}</li>`;
-}).join("");
