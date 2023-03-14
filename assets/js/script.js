@@ -157,7 +157,7 @@ let fantasyAdventureQuestions = [{
     option3: "7",
     option4: "13",
     answer: 4,
-}]
+}];
 
 let animationQuestions = [{
     question: "What is Belle's fathers' name in Beauty & The Beast?",
@@ -229,7 +229,7 @@ let animationQuestions = [{
     option3: "Miss Hayley's",
     option4: "Miss Hellie's",
     answer: 1,
-}]
+}];
 
 let comedyQuestions = [{
     question: "Who plays Dale Doback in Stepbrothers?",
@@ -301,7 +301,7 @@ let comedyQuestions = [{
     option3: "Wednesday",
     option4: "Thursday",
     answer: 3,
-}]
+}];
 
 let horrorThrillerQuestions = [{
     question: "Who produced the movie The Grudge?",
@@ -373,7 +373,7 @@ let horrorThrillerQuestions = [{
     option3: "Masquerading as actors in a sci-fi movie",
     option4: "Hiding in an underground bunker",
     answer: 3,
-}]
+}];
 
 let romanceQuestions = [{
     question: "Who wrote 'Dear John', 'The Last Song' & 'The Notebook'?",
@@ -445,7 +445,7 @@ let romanceQuestions = [{
     option3: "Sir Ector",
     option4: "Sir Colville",
     answer: 2,
-}]
+}];
 
 // functions showScreen and toggleScreen adapted from 4n4ru Guessing Bee game
 function showScreen(id) {
@@ -474,8 +474,8 @@ document.addEventListener('DOMContentLoaded', function () {
         let gameType = button.getAttribute('data-type');
         showScreen('game-screen');
         runGame(gameType);
-    })
-})
+    });
+});
 
 function runGame(gameType) {
     score = 0;
@@ -483,15 +483,15 @@ function runGame(gameType) {
     if (gameType === "sci-fi") {
         availableQuestions = mainObj.scifiQuestions;
     } else if (gameType === "fantasy-adventure") {
-        availableQuestions = [...fantasyAdventureQuestions]
+        availableQuestions = [...fantasyAdventureQuestions];
     } else if (gameType === "comedy") {
-        availableQuestions = [...comedyQuestions]
+        availableQuestions = [...comedyQuestions];
     } else if (gameType === "animation") {
-        availableQuestions = [...animationQuestions]
+        availableQuestions = [...animationQuestions];
     } else if (gameType === "romance") {
-        availableQuestions = [...romanceQuestions]
+        availableQuestions = [...romanceQuestions];
     } else if (gameType === "thriller-horror") {
-        availableQuestions = [...horrorThrillerQuestions]
+        availableQuestions = [...horrorThrillerQuestions];
     }
     displayQuestion();
 }
@@ -505,7 +505,7 @@ function displayQuestion() {
 
     questionCounter++;
 
-    questionCountText.textContent = `${questionCounter}/${maxQuestions}`
+    questionCountText.textContent = `${questionCounter}/${maxQuestions}`;
 
     // calculate the value of the question index adapted from Brian Design Tutorial
 
@@ -520,21 +520,21 @@ function displayQuestion() {
 
     // display each of the four options
     answers.forEach(function (option) {
-        const number = option.dataset["number"];
+        const number = option.dataset.number;
         option.innerText = currentQuestion["option" + number];
-    })
+    });
 
     // remove question used from array
     availableQuestions.splice(questionIndex, 1);
 
     acceptingAnswers = true;
-};
+}
 
 // iterate through the users choice
 answers.forEach(function (option) {
     option.addEventListener("click", function (event) {
         const userChoice = event.target;
-        const userAnswer = userChoice.dataset["number"];
+        const userAnswer = userChoice.dataset.number;
 
         // Checking to see whether the user's answer is correct
         const classToApply = userAnswer == currentQuestion.answer ? "correct" : "incorrect";
@@ -551,8 +551,8 @@ answers.forEach(function (option) {
             userChoice.parentElement.classList.remove(classToApply);
             displayQuestion();
         }, 500);
-    })
-})
+    });
+});
 
 function incrementScore(num) {
     score += num;
@@ -570,13 +570,12 @@ const finalScore = document.getElementById("final-score");
 // Using json.parse and json.parse and the method used to save the high scores was adapted from James Q Quick tutorialcredited to the James Q Quick tutorial
 
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-const maxHighScores = 5;
 
 // Code to ensure the user cannot click save unless they have entered a username in the form input field
 
 username.addEventListener("keyup", function () {
     saveScoreBtn.disabled = !username.value;
-})
+});
 
 // The function that executes when a user clicks the save button
 
