@@ -42,7 +42,7 @@ main {
 
 .btn {
     width: 15rem;
-    border-radius: 2rem;
+    border-radius: 1rem;
     height: 10rem;
     margin: 1rem 1rem;
     border: 2px solid #9E3D36;
@@ -89,7 +89,6 @@ footer i {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
 }
 
 .game-area {
@@ -106,9 +105,9 @@ footer i {
     align-items: center;
     background-color: #DDA0A4;
     margin: 0 auto;
-    font-size: 150%;
+    font-size: 1.5rem;
     border: 1px solid #9E3D36;
-    font-weight: bold;
+    border-radius: 0.5rem;
 }
 
 .answer-area {
@@ -118,42 +117,41 @@ footer i {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    margin: 0 auto;
 }
 
 .answer-box {
     height: 5rem;
     width: 20rem;
     border: 1px solid #9E3D36;
-    border-radius: 12px;
+    border-radius: 1rem;
     background-color: #DDA0A4;
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-weight: bold;
 }
 
 .answer-box:hover {
     cursor: pointer;
-    box-shadow: 0 0.5rem 1.5rem 0 #DDA0A4;
+    box-shadow: 0 0.5rem 1.5rem 0 #411D0C;
     transition: transform 150ms;
     transform: scale(1.05);
 }
 
 .option-prefix {
     background-color: #9E3D36;
-    color: white;
+    color: #F7F0F0;
     padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 150%;
-    border-radius: 10px;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
 }
 
 .option-text {
     padding: 10px;
-    font-size: 150%;
+    font-size: 1.5rem;
+    width: 100%;
 }
 
 /* styles for the heads up display with the question number and score */
@@ -293,17 +291,20 @@ input::placeholder {
     height: 8rem;
 }
 
-/* Media queries for screen sizes of max width of 850px */
+/* Media queries for screen sizes of max width of 855px */
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 855px) {
 
-    #game-screen,
-    .game-area {
-        height: 35rem;
+    #game-screen {
+        height: 38rem;
     }
 
     .question-area {
         height: 8rem;
+    }
+
+    .answer-box {
+        margin-top: 1rem;
     }
 }
 
@@ -311,12 +312,10 @@ input::placeholder {
 @media screen and (max-width: 600px) {
     .btn {
         width: 10rem;
-        height: 10rem;
     }
 
-    .game-area h2,
-    p {
-        font-size: 120%;
+    #question {
+        font-size: 2rem;
     }
 
     .question-count,
@@ -343,12 +342,7 @@ input::placeholder {
         font-size: 2rem;
     }
 
-    /* #start-btns {
-        padding: 1rem;
-    } */
-
     .btn {
-        /* font-size: 1.5rem; */
         font-weight: 400;
         width: 9rem;
         height: 8rem;
@@ -356,7 +350,11 @@ input::placeholder {
     }
 
     .question-area {
-        height: 10rem;
+        height: 8rem;
+    }
+
+    #question, .answer-box {
+        font-size: 1.5rem;
     }
 
     .answer-box {
@@ -374,16 +372,23 @@ input::placeholder {
 
 @media screen and (max-width: 340px) {
 
-    .game-area h2,
-    p {
-        font-size: 100%;
-    }
-
     .btn {
         width: 7rem;
         height: 7rem;
         font-size: 1rem;
         font-weight: 400;
+    }
+
+    .question-area {
+        height: 10rem;
+    }
+
+    .answer-box {
+        height: 4rem;
+    }
+
+    .answer-box p {
+        font-size: 1.2rem;
     }
 }
 
