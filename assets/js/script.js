@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 let mainObj = {};
 const maxQuestions = 5;
 let score = 0;
