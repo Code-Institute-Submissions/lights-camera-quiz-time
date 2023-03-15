@@ -161,9 +161,15 @@ When a user completes the quiz their score incrememnts correctly in the heads up
 When a user achieved a high score in the console the user and their score was being logged however it was not being displayed to the user on the high score screen until another game was played and the high score screen was accessed again. ![The code used to display the high score](assets/images/display-high-scores-code.png) The code used to display the highscores was written below the saveHighScores function. I realised this was being carried out after the function so I included the code inside the saveHighScores function and this solved the issue ![Display high scores fix](assets/images/display-high-score-fix.png).
 - ![Quiz questions not displaying as json file not fully loaded](assets/images/question-not-loading.png)
 When the available questions varibable is set to the scifiquestions property from the json file it takes time to fetch the questions and if the user clicks the scifi category before the DOM fully loads the questions do not display. ![Code used to fetch the questions from the json file](assets/images/json-fetch-code.png). After realising the issue is that the user can click the scifi button before the questions are being fetched from the json file I decided to remove the code and place it inside the function that executes once the DOM has fully loaded and this fixed the issue.
+- I had initially assigned the questions to variables in the js file which made the js file quite cumbersome.
+![Accessing Question from the assigned variables](assets/images/variables-accessing-questions.png)
+After advice from my mentor, I coded all the questions in a json file and accessed the properties of the json file for the question categories in the runGame function. 
+![](assets/images/json-accessing-questions.png)
+Initially I was hesitant to use the json method as I felt it was causing bugs on the site as it was taking time to fetch the questions. However my mentor recommended to me that in reality data such as questions and their options for quizes are stored in json files and then accessed in other files such as js files and encouraged me to aim to get the json file working for this project. I have used the correct syntax for the json file and the different questions are displaying to the user which is very positive.
 
 #### Unsolved Bugs
-- I have assigned the questions to variables in the js file. I also have the questions included in a json file and I am accessing the properties of the json file for the scifiquestions category. My mentor recommended to me that in reality data such as questions and their options for quizes are stored in json filed and then accessed in other files such as js files. The syntax I have used is correct for writing json and the scifiquestions are displaying to the user. I have left the other categories as accessing the data from the variables as I am concerned more bugs may appear as I am new to using json.
+- A warning appears on the CSS validator regarding the import file not being checked but there are no errors.
+- On the home screen if a button is now clicked and the body is clicked the user is taken to the end screen.
 
 ### Deployment
 [Github](https://github.com/) was used to deploy the site.
@@ -185,7 +191,7 @@ This walkthrough YouTube tutorial was used and adapted to write the iteration lo
 - [4n4ru CIP2 Guessing Bee](https://github.com/4n4ru/CI-P2-GuessingBee/blob/master/assets/js/guessing-bee.js)
 This repository was used and adapted to toggle between the home screen and the game screen.
 - [Brian Design - How to Make a Quiz App using HTML, CSS & Javascript](https://www.youtube.com/watch?v=f4fB9Xg2JEY)
-This walkthrough Youtube tutorial was used and adapated for the hover effect over the buttons on the home screen and the option divs on the game screen. This walkthrough was also used to calculate the value of the question index in the JS file displayQuestion function and the design of the question bank array.
+This walkthrough Youtube tutorial was used and adapated for the hover effect over the buttons on the home screen and the option divs on the game screen. This walkthrough was also used to calculate the value of the question index in the JS file displayQuestion function.
 - [The Love Maths Walkthrough Porject](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+2021_T1/courseware/2d651bf3f23e48aeb9b9218871912b2e/78f3c10a937c4fe09640c7c0098d16bd/)
 The walkthrough was used and adapted to write the function for when the DOM Content loads and for inspiration on how to use if else statements for the game to choose between a selection of data types and display the appropriate question herein.
 - [How to Read a JSON File in JavaScript](https://www.freecodecamp.org/news/how-to-read-json-file-in-javascript/)
@@ -194,13 +200,13 @@ This code in this document was used and adapted to fetch the JSON file with the 
 This YouTube tutorial was useful in troubleshooting and fetching the quiz questions and ensuring all questions were being assigned to the correct variables.
 
 #### Content
-- All quiz questions and option were written by the developer.
+- All quiz questions and options were written by the developer.
 
 #### Media
-- The image file used as a background for the home screen and quiz screen was downloaded from Pexels and sourced by Pixabay.
-- 
+- The image file used as a background for all screens was downloaded from Pexels and sourced by Pixabay.
 
 #### Acknowledgements
-- Thank you to my family for testing the site and providing feedback and support throughout the project.
+- Thank you to my family for encouragement and support throughout the project and for testing the site and providing feedback and suggestions on improvements where necessary.
 - Thank you to my mentor for the support, positivity and reassurance throughout the project.
 - Thank you to the facilitator for providing relevant resources and repositories to aid in the development of the project.
+- Thank you to tutor support on the coding issues that arose throughout the project.
