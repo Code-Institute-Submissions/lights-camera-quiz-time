@@ -10,7 +10,6 @@
 }
 
 body {
-    position: relative;
     font-family: "Cormorant Infant", sans-serif;
     font-weight: 300;
     color: #9E3D36;
@@ -34,14 +33,7 @@ main {
 
 /* Design styles for the categories area on the home screen with 6 buttons for user to click on*/
 
-.categories {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-#start-btns {
+#start-screen, #start-btns {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -50,20 +42,20 @@ main {
 
 .btn {
     width: 15rem;
-    border-radius: 10%;
+    border-radius: 2rem;
     height: 10rem;
-    margin: 2rem 1rem;
+    margin: 1rem 1rem;
     border: 2px solid #9E3D36;
     background-color: #DDA0A4;
     color: #9E3D36;
-    font-weight: 600;
-    font-size: 150%;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 /* hover styles adapted from Brian Design Youtube tutorial on how to make a quiz app more details in the README file */
 .btn:hover {
     cursor: pointer;
-    box-shadow: 0 0.5rem 1.5rem 0 #DDA0A4;
+    box-shadow: 0 0.5rem 1.5rem 0 #411D0C;
     transition: transform 150ms;
     transform: scale(1.05);
 }
@@ -319,7 +311,6 @@ input::placeholder {
 @media screen and (max-width: 600px) {
     .btn {
         width: 10rem;
-        border-radius: 10%;
         height: 10rem;
     }
 
@@ -352,16 +343,16 @@ input::placeholder {
         font-size: 2rem;
     }
 
-    #start-btns {
+    /* #start-btns {
         padding: 1rem;
-    }
+    } */
 
     .btn {
-        font-size: 1.5rem;
-        font-weight: bold;
+        /* font-size: 1.5rem; */
+        font-weight: 400;
         width: 9rem;
         height: 8rem;
-        margin: 0 auto;
+        margin: 1rem auto;
     }
 
     .question-area {
@@ -392,6 +383,7 @@ input::placeholder {
         width: 7rem;
         height: 7rem;
         font-size: 1rem;
+        font-weight: 400;
     }
 }
 
