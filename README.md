@@ -89,6 +89,8 @@ The high scores screen displays the top 5 results including the score and the us
 - Gitpod was used to add commits each time a new feature was added and pushing to Github for future maintainability
 9. [Github]()
 - Github was used for storing the site after being pushed from Gitpod and for deploying the site.
+10. [Youtube](https://www.youtube.com/)
+- YouTube was used for watching walkthroughs of building quiz apps to gain insight into different functionality of JavaScript.
 
 ### Future Features
 - ![Contact Us Page](assets/images/future-feature-contact.png)
@@ -98,33 +100,40 @@ I would like to include a contact us page with the option for users to input the
 
 ### Validation and Testing
 [W3C HTML Validator](https://validator.w3.org/#validate_by_input)
-- 
-- 
+- There were no errors or warnings to show when the html code was passed into the validator.
+- ![HTML Validator](assets/images/html-validator.png)
 
 [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
-- 
-- 
+- There are no errors to show when the css code is passed through the validator
+- ![CSS Validator](assets/images/css-validator-test.png)
+- There is one warning that appears when the css code is passed through the validator
+- ![CSS Validator warning](assets/images/css-validator-warning.png)
 [JS Validator](https://jshint.com/)
-- 
-- 
+- There were no errors when the js code was passed through jshint however there were a large number of warnings. Several were for missing semicolons which was easily rectified.
+![JSHint Test 1](assets/images/jshint-warnings-test1.png)
+- There were still a large number of warnings to do with the assignment of let and const for different variables and for the use of the spread operator and template literal syntax. 
+![JSHint Test 2](assets/images/jshint-warnings-test2.png)
+- After discussion with Josh on tutor support and confirming the assignment of variables I chose was correct he recommended to include a comment above the js code stating the version that is applicable whjich removed the warnings from JSHint.
+![JS Hint Test 3](assets/images/jshint-final-test.png)
+- It was noted that saveHighScore function was an unusead vaiable. This function was not called in the js file, it was called in the html file using the onclick attribute.
 
 ### Testing User Stories
 First Time Users
-1. 
-2. 
-3. 
+1. I can see whether the option I select is correct or incorrect however if I answer incorrectly there is no display of the correct option.
+2. I can see my score incrementing at the top of the game screen as I progress through the questions.
+3. I am confident that the user is a trusted source as the content is accurate and there are no typos.
 
 ### Testing on Browers and Devices
 #### Browser Testing
-- 
+- The site was tested on Google Chrome, Microsoft Edge and several mobile devices.
 - 
 - 
 - 
 - 
 
 #### Device Testing
-- 
-- 
+- On the Samsung Galaxy A12 and the iPhone 13 the site works well, there is a delay on the hover effect from question to question. The question that was previously selected remains hovered over on the next question.
+- Users were having trouble selecting the options for some of the questions so I changed the option-text width to 100% so the users can click anywhere in the box to choose their option.
 - 
 
 #### Lighthouse Testing
@@ -150,7 +159,7 @@ When the available questions varibable is set to the scifiquestions property fro
 
 ### Deployment
 [Github](https://github.com/) was used to deploy the site.
-The site is accessible [here]().
+The site is accessible [here](https://louiseconlon11.github.io/lights-camera-quiz-time/).
 
 #### Instructions
 1. Login to github.com
@@ -159,6 +168,7 @@ The site is accessible [here]().
 4. Click on pages on the left hand side under the code and automation heading.
 5. Under the heading of build and deployment click the branch drop down menu and select main and click save.
 6. Refresh the page and a notification will display that your site is now live and click the visit site option.
+![Deployment Instructions](assets/images/github-deployment.png)
 
 ### Credits
 #### Code
