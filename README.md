@@ -2,6 +2,8 @@
 
 This website provides an interavtive quiz with 6 different categories of movie genre for the user to choose. The user will be asked 5 questions in each category and their score will be displayed and stored at the end of each category.
 
+![Lights, Camera, Quiz Time](assets/images/am-i-responsive.png)
+
 [View the live website here](https://louiseconlon11.github.io/lights-camera-quiz-time/)
 
 ## User experience
