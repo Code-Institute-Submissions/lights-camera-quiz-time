@@ -311,6 +311,10 @@ input::placeholder {
 
 @media screen and (max-width: 855px) {
 
+    #start-screen {
+        padding: 1rem;
+    }
+
     #game-screen {
         height: 38rem;
     }
@@ -326,6 +330,11 @@ input::placeholder {
 
 /* Media queries for screen sizes of max width of 600px */
 @media screen and (max-width: 600px) {
+
+    #start-screen {
+        padding: 0;
+    }
+
     .btn {
         width: 12rem;
     }
@@ -412,13 +421,14 @@ input::placeholder {
     }
 }
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 320px) {
 
     .btn {
         width: 7rem;
         height: 7rem;
         font-size: 1rem;
         font-weight: 400;
+        margin: 0.5rem auto;
     }
 
     #high-scores-screen .btn {
@@ -446,7 +456,7 @@ input::placeholder {
 @media screen and (min-width: 820px) {
 
     #start-screen {
-        padding: 1rem;
+        padding: 2rem;
     }
 }
 
@@ -454,7 +464,22 @@ input::placeholder {
 
     .btn {
         width: 20rem;
-        height: 10rem;
+        height: 12rem;
+        font-size: 2rem;
+    }
+
+    .answer-box {
+        width: 25rem;
+    }
+}
+
+/* Styles added for large desktop screens after checking on Am I responsive */
+@media screen and (min-width: 1300px) {
+
+    .btn {
+        width: 25rem;
+        height: 15rem;
+        font-size: 2.5rem;
     }
 
     .answer-box {
