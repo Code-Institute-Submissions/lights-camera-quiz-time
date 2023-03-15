@@ -329,6 +329,10 @@ input::placeholder {
     .btn {
         width: 12rem;
     }
+    
+    .question-area {
+        height: 8.5rem;
+    }
 
     #question {
         font-size: 2rem;
@@ -415,6 +419,10 @@ input::placeholder {
 
     #high-scores-screen .btn {
         width: 10rem;
+    }
+
+    #game-screen {
+        height: 36rem;
     }
 
     .question-area {
