@@ -344,6 +344,8 @@ input::placeholder {
     }
 }
 
+/* Media query for screen sizes of max width of 465px */
+
 @media screen and (max-width: 465px) {
     .btn {
         width: 10rem;
@@ -431,6 +433,7 @@ input::placeholder {
 
     .answer-box {
         height: 4rem;
+        width: 25rem;
     }
 
     .answer-box p {
