@@ -377,6 +377,8 @@ input::placeholder {
     }
 
     .btn:hover {
+        box-shadow: 0 0.5rem 1.5rem 0 #411D0C;
+        transition: none;
         transform: none;
     }
 
