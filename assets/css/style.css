@@ -180,14 +180,14 @@ footer i {
     border: 1px solid #411D0C;
 }
 
-/* Styles to display to the user for correct and incorrect answers when clicked */
+/* Styles to display to the user for correct and incorrect answers */
 
 .correct {
-    background: linear-gradient(rgba(170, 231, 176, 0.9), rgba(115, 229, 124, 0.9))
+    background: linear-gradient(rgba(170, 231, 176, 0.9), rgba(115, 229, 124, 0.7))
 }
 
 .incorrect {
-    background: linear-gradient(rgba(243, 124, 124, 0.9), rgba(237, 82, 82, 0.9))
+    background: linear-gradient(rgba(243, 124, 124, 0.9), rgba(237, 82, 82, 0.7))
 }
 
 /*styles for end screen with user input form */
@@ -215,6 +215,10 @@ form {
     font-family: 'Work Sans';
     margin: 1rem 0;
     height: 8rem;
+    width: 15rem;
+    color: #411D0C;
+    background-color: #AF703C;
+    border: 1px solid #411D0C;
 }
 
 .btn[disabled]:hover {
@@ -235,7 +239,7 @@ input {
 input::placeholder {
     font-size: 2rem;
     padding: 1rem;
-    color: #9E3D36;
+    color: #AF703C;
 }
 
 #username {
@@ -253,6 +257,7 @@ input::placeholder {
     font-size: 3rem;
     margin: 1rem 0;
     font-weight: bold;
+    color: #411D0C;
 }
 
 /* styles for the high scores screen */
@@ -260,17 +265,19 @@ input::placeholder {
 #high-scores-screen {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 #high-scores-title {
     text-align: center;
     font-size: 2.5rem;
     padding: 1rem;
+    color: #411D0C;
 }
 
 .high-scores-list {
     width: 15rem;
-    margin: 0 auto;
+    margin: 1rem auto;
     list-style-type: none;
     display: flex;
     justify-content: center;
@@ -278,8 +285,9 @@ input::placeholder {
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
-    background-color: #DDA0A4;
-    border: 1px solid #9E3D36;
+    color: #411D0C;
+    background-color: #AF703C;
+    border-radius: 1rem;
 }
 
 #high-scores-screen .btn {
@@ -288,8 +296,11 @@ input::placeholder {
     text-align: center;
     align-items: center;
     font-size: 2.5rem;
-    margin: 0 auto;
+    margin: 1rem auto;
     height: 8rem;
+    background-color: #AF703C;
+    border: 1px solid #411D0C;
+    color: #411D0C;
 }
 
 /* Media queries for screen sizes of max width of 855px */
@@ -312,7 +323,7 @@ input::placeholder {
 /* Media queries for screen sizes of max width of 600px */
 @media screen and (max-width: 600px) {
     .btn {
-        width: 10rem;
+        width: 12rem;
     }
 
     #question {
@@ -323,17 +334,13 @@ input::placeholder {
     .score {
         width: 9rem;
     }
-
-    #end-page .btn {
-        font-size: 2rem;
-        padding: 1rem;
-    }
-
-    #end-text {
-        width: 20rem;
-    }
 }
 
+@media screen and (max-width: 465px) {
+    .btn {
+        width: 10rem;
+    }
+}
 
 /* Media queries for screen sizes of max width of 400px */
 
@@ -367,6 +374,10 @@ input::placeholder {
         width: 8rem;
     }
 
+    #end-page .btn {
+        width: 10rem;
+    }
+
     #high-scores-screen .btn {
         font-size: 2rem;
     }
@@ -383,6 +394,10 @@ input::placeholder {
         height: 7rem;
         font-size: 1rem;
         font-weight: 400;
+    }
+
+    #high-scores-screen .btn {
+        width: 10rem;
     }
 
     .question-area {
