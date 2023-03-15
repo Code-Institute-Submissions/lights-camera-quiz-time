@@ -216,9 +216,9 @@ form {
     margin: 1rem 0;
     height: 8rem;
     width: 15rem;
-    color: #DDA0A4;
-    background-color: #9E3D36;
-    border: 1px solid #DDA0A4;
+    color: #9E3D36;
+    background-color: #DDA0A4;
+    border: 1px solid #9E3D36;
 }
 
 .btn[disabled]:hover {
@@ -260,7 +260,7 @@ input::placeholder {
     color: #DDA0A4;
     background-color: #9E3D36;
     border-radius: 50%;
-    width: 3rem;
+    width: 3.5rem;
     text-align: center;
 }
 

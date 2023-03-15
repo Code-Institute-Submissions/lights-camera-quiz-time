@@ -2,6 +2,8 @@
 
 This website provides an interavtive quiz with 6 different categories of movie genre for the user to choose. The user will be asked 5 questions in each category and their score will be displayed and stored at the end of each category.
 
+[View the live website here](https://louiseconlon11.github.io/lights-camera-quiz-time/)
+
 ## User experience
 ### User Stories
 - First Time Vistor Goals
@@ -125,21 +127,27 @@ First Time Users
 
 ### Testing on Browers and Devices
 #### Browser Testing
-- The site was tested on Google Chrome, Microsoft Edge and several mobile devices.
-- 
-- 
-- 
-- 
+- The site was tested on Google Chrome, Microsoft Edge and Internet Explorer.
+- The layout and positioning of the buttons on the home screen and question and answer boxes appear consistent
+- The external social media links all work and open in a new tab
+- The internal links to the home screen accessible from the main site heading and home buttons on the end screen and high scores screen all return the user to the home screen.
+- The input field on the end screen allows the user input and the save button is disabled unless the user enters a username.
+- The website is responsive on all applications.
 
 #### Device Testing
-- On the Samsung Galaxy A12 and the iPhone 13 the site works well, there is a delay on the hover effect from question to question. The question that was previously selected remains hovered over on the next question.
+- The site was tested on a variety of devices including desktop, HP laptops, Samsung Galaxy A12 and A13, iPhone13 and iPhone SE 2 models. Family members were asked to access the site and navigate through the quiz and different pages and inform me of any overlap, sizing or functionality issues.
+- Initially on the iPhone13 model and Galaxy A12 there was a delay on the hover effect from question to question. This caused a difference in sizing of the answer boxes on the consecutive question as the hover remained on the option that was previously clicked. To rectify this issue I removed the hover effect transition for screen sizes less than 400px.
+![User Tests Hover](assets/images/user-test-hover.jpg)
 - Users were having trouble selecting the options for some of the questions so I changed the option-text width to 100% so the users can click anywhere in the box to choose their option.
-- 
+- There was an overlap of the answers boxes and question box so I added a margin between them to prevent this.
+![User Tests Overlap](assets/images/user-test-overlap.jpg)
+- Some of the option text was not correctly fitting in the answer boxes as certain questions have quite a number of characters so I increased the width of the answer boxes on smaller screen sizes to remedy this.
+![User Tests Answer Box Size](assets/images/user-test-answer-box-size.jpg)
 
 #### Lighthouse Testing
-- 
-- 
-- 
+- I carried out a Lighthouse test using the Google Chrome Lighthouse facility for both desktop and mobile. The results are very positive for accessibility, best practices and search engine optimisation. 
+![Lighthouse test mobile]()
+![Lighthouse test desktop]()
 
 ### Bugs
 #### Solved Bugs
