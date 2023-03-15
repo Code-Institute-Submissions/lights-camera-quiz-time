@@ -173,21 +173,21 @@ footer i {
     justify-content: center;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #411D0C;
-    background-color: #AF703C;
+    color: #DDA0A4;
+    background-color: #9E3D36;
     height: 2rem;
     width: 9rem;
-    border: 1px solid #411D0C;
+    border: 1px solid #DDA0A4;
 }
 
 /* Styles to display to the user for correct and incorrect answers */
 
 .correct {
-    background: linear-gradient(rgba(170, 231, 176, 0.9), rgba(115, 229, 124, 0.7))
+    background: linear-gradient(rgba(170, 231, 176, 0.9), rgba(115, 229, 124, 0.8))
 }
 
 .incorrect {
-    background: linear-gradient(rgba(243, 124, 124, 0.9), rgba(237, 82, 82, 0.7))
+    background: linear-gradient(rgba(243, 124, 124, 0.9), rgba(237, 82, 82, 0.8))
 }
 
 /*styles for end screen with user input form */
