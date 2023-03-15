@@ -26,9 +26,9 @@ main {
     color: #9E3D36;
     letter-spacing: 3px;
     font-weight: 600;
-    font-size: 250%;
+    font-size: 3rem;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
 }
 
 /* Design styles for the categories area on the home screen with 6 buttons for user to click on*/
@@ -431,8 +431,21 @@ input::placeholder {
         margin: 0.5rem auto;
     }
 
+    #end-screen .btn {
+        margin: 0.5rem auto;
+    }
+
+    #final-text {
+        font-size: 2rem;
+    }
+
     #high-scores-screen .btn {
         width: 10rem;
+        margin-top: 0;
+    }
+
+    #high-scores-list {
+        margin: 0.5rem auto;
     }
 
     #game-screen {
