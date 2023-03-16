@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
  * This function resets the score and question counter to zero
  * it then displays the questions associated to the different categories
  * based on which button and game type the user selected
- * @param {string} gameType 
+ * @param {string} gameType (the button the user selected)
  */
 
 function runGame(gameType) {
@@ -144,7 +144,7 @@ answers.forEach(function (option) {
  * This function increases the score by the bonus amount
  * sets the score text on the game page
  * and the total score text on the end page
- * @param {num} num 
+ * @param {number} (the bonus awarded to the player)
  */
 function incrementScore(num) {
     score += num;

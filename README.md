@@ -95,7 +95,9 @@ The high scores screen displays the top 5 results including the score and the us
 - Github was used for storing the site after being pushed from Gitpod and for deploying the site.
 10. [Am I Responsive](https://ui.dev/amiresponsive)
 - The Am I Responsive site was used to check the responsivity of the site on mobile, tablet and desktop screen sizes. The image was then saved and used in this README file.
-10. [Youtube](https://www.youtube.com/)
+11. [Favicon.ico and App Icon Generator](https://www.favicon-generator.org/)
+- This site was used to create the favicon for the site. A screenshot of a small section of the main image was uploaded to the site and the favicon was created from this image.
+12. [Youtube](https://www.youtube.com/)
 - YouTube was used for watching walkthroughs of building quiz apps to gain insight into different functionality of JavaScript.
 
 ### Future Features
