@@ -124,6 +124,8 @@ The high scores screen displays the top 5 results including the score and the us
 - This site was used to create the favicon for the site. A screenshot of a small section of the main image was uploaded to the site and the favicon was generated from this image.
 12. [Youtube](https://www.youtube.com/)
 - YouTube was used for watching walkthroughs of building quiz apps to gain insight into different functionality of JavaScript.
+13. [TinyPNG](https://tinypng.com/)
+- TinyPNG was used for compressing the main popcorn image after completing the first lighthouse test on mobile devices.
 
 ### Future Features
 ![Contact Us Page](assets/images/future-feature-contact.png)
@@ -197,10 +199,11 @@ The high scores screen displays the top 5 results including the score and the us
 ![User Tests Answer Box Size](assets/images/user-test-answer-box-size.jpg)
 
 #### Lighthouse Testing
-- I carried out a Lighthouse test using the Google Chrome Lighthouse facility for both desktop and mobile. The results are very positive for accessibility, best practices and search engine optimisation. 
+- I carried out a Lighthouse test using the Google Chrome Lighthouse facility for both desktop and mobile. The results are very positive for accessibility, best practices and search engine optimisation. The performance was quite low on mobile devices so I used TinyPNG to compress the main popcorn image and it reduced the size by 70%.
+![Compressed main image](assets/images/compressed-main-image.png)
 
-![Lighthouse test mobile]()
-![Lighthouse test desktop]()
+![Lighthouse test mobile](assets/images/lighthouse-report-mobile.png)
+![Lighthouse test desktop](assets/images/lighthouse-report-desktop.png)
 
 ### Bugs
 #### Solved Bugs
