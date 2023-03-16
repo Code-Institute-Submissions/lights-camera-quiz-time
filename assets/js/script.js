@@ -159,7 +159,10 @@ const saveScoreBtn = document.getElementById("save-score");
 const finalScore = document.getElementById("final-score");
 
 // Code to save the high scores
-// Using json.parse and json.parse and the method used to save the high scores was adapted from James Q Quick tutorialcredited to the James Q Quick tutorial
+/* Using json.parse and json.parse and 
+the method used to save and display the high scores 
+was adapted from the James Q Quick tutorials 8 and 9
+*/
 
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
@@ -198,7 +201,7 @@ function saveHighScore(event) {
 
     localStorage.setItem("highScores", JSON.stringify(highScores));
 
-    // code to display the highscores using the map method adapated from James Q Quick tutorial
+    // code to display the highscores using the map method adapated from James Q Quick tutorial 9
 
     const highScoresList = document.getElementById("high-scores-list");
     highScoresList.innerHTML = highScores.map(score => {

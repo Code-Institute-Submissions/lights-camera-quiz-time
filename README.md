@@ -192,8 +192,14 @@ The site is accessible [here](https://louiseconlon11.github.io/lights-camera-qui
 
 ### Credits
 #### Code
-- [James Q Quick - Build a Quiz App](https://www.youtube.com/watch?v=zZdQGs62cR8&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=3)
+- [James Q Quick - Build a Quiz App Tutorial 3](https://www.youtube.com/watch?v=zZdQGs62cR8&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=3)
 This walkthrough YouTube tutorial was used and adapted to write the iteration loops in the displayQuestion function to display the four options associated with each question and to add the loop to add the click event listener to register when a user makes their selected choice.
+- [w3schools local storage](https://www.w3schools.com/html/html5_webstorage.asp)
+- This document was used to gain insight into using the local storage set and getItem to be utilised to save the user high scores and access in the applications tab.
+- [James Q Quick - Build a Quiz App Tutorial 8](https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=8)
+This walkthrough was used to help save the user scores to local storage, add each score to the array of user objects, username and score, sort the scores from highest to lowest and then splicest at the fifth index to remove the lowest score.
+- [James Q Quick - Build a Quiz App Tutorial 9](https://www.youtube.com/watch?v=jfOv18lCMmw&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=9)
+This walkthrough was used and adapted to display the stored high scores to the user on the high scores screen. The high scores were displayed as list items using the map method.
 - [4n4ru CIP2 Guessing Bee](https://github.com/4n4ru/CI-P2-GuessingBee/blob/master/assets/js/guessing-bee.js)
 This repository was used and adapted to toggle between the home screen and the game screen.
 - [Brian Design - How to Make a Quiz App using HTML, CSS & Javascript](https://www.youtube.com/watch?v=f4fB9Xg2JEY)
