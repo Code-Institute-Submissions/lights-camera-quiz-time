@@ -248,6 +248,9 @@ Initially I was hesitant to use the json method as I felt it was causing bugs on
 
 #### Unsolved Bugs
 - A warning appears on the CSS validator regarding the import file not being checked but there are no errors.
+- I noticed when I click outside a button and not directly on a button on the home screen it takes me to the end screen. I initally thought it might be a bug due to using the fetch method inside a function however I've noticed it's because I have targetted the div holding the buttons to add the listener for clicks.
+![Unsolved bug](assets/images/unsolved-bug.png) 
+If I access the buttons by tag name instead it will also access the button on the end screen that executes the saveHighScore function when clicked. I have left the code how it is for the time being as I would be concerned about introducing errors or bugs at this stage.
 
 ### Deployment
 [Github](https://github.com/) was used to deploy the site.

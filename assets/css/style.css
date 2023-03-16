@@ -52,6 +52,10 @@ main {
     font-size: 1.5rem;
 }
 
+data-type {
+    width: 100%;
+}
+
 /* hover styles adapted from Brian Design Youtube tutorial on how to make a quiz app more details in the README file */
 .btn:hover {
     cursor: pointer;
