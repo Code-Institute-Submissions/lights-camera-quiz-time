@@ -15,6 +15,13 @@ let acceptingAnswers = false;
 let availableQuestions = [];
 
 // functions showScreen and toggleScreen adapted from 4n4ru Guessing Bee game
+/**
+ * The showscreen function calls the togglescreen function
+ * which creates an array of the four screen options
+ * and calls the toggle screen function which has a for loop
+ * which iterates through each of the screen ids
+ * @param {string} id [screen id]
+ */
 function showScreen(id) {
     let screens = ['start-screen', 'game-screen', 'end-screen', 'high-scores-screen'];
     for (const screen of screens) {
@@ -44,6 +51,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+/**
+ * This function resets the score and question counter to zero
+ * it then displays the questions associated to the different categories
+ * based on which button and game type the user selected
+ * @param {string} gameType 
+ */
+
 function runGame(gameType) {
     score = 0;
     questionCounter = 0;
@@ -62,6 +76,12 @@ function runGame(gameType) {
     }
     displayQuestion();
 }
+
+/**
+ * This function displays the question and associated options
+ * increases the question counter
+ * and splices any question already asked
+ */
 
 function displayQuestion() {
 
@@ -120,6 +140,12 @@ answers.forEach(function (option) {
     });
 });
 
+/**
+ * This function increases the score by the bonus amount
+ * sets the score text on the game page
+ * and the total score text on the end page
+ * @param {num} num 
+ */
 function incrementScore(num) {
     score += num;
     scoreText.textContent = score;
@@ -143,7 +169,12 @@ username.addEventListener("keyup", function () {
     saveScoreBtn.disabled = !username.value;
 });
 
-// The function that executes when a user clicks the save button
+/**
+ * This function executes when a user clicks the save button
+ * This function can only executes if a user enters their username in the input field
+ * The user scores are sorted from highest score to lowest and
+ * saved in local storage and displayed to the user on the highscores screen.
+ * */ 
 
 function saveHighScore(event) {
     event.preventDefault();
