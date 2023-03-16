@@ -162,6 +162,8 @@ The high scores screen displays the top 5 results including the score and the us
 - After discussion with tutor support and confirming the assignment of variables I chose were correct they recommended including a comment above the js code stating the version that is applicable which removed the warnings from JSHint.
 - It was noted that the saveHighScore function was an unusead vaiable. This function was not called in the js file, it was called in the html file using the onclick attribute.
 
+![JS Hint Final Test](assets/images/jshint-test3.png)
+
 ### Testing User Stories
 #### First Time Users
 1. I can see whether the option I select is correct or incorrect however if I answer incorrectly there is no display of the correct option.
