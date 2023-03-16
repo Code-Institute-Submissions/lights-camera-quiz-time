@@ -432,6 +432,8 @@ input::placeholder {
     }
 }
 
+/* Media queries for screen sizes of max width of 320px as displayed on Am I Responsive */
+
 @media screen and (max-width: 320px) {
 
     .btn {
@@ -477,6 +479,8 @@ input::placeholder {
     }
 }
 
+/* Media queries for screen sizes of min width of 820px */
+
 @media screen and (min-width: 820px) {
 
     #start-screen {
@@ -484,11 +488,13 @@ input::placeholder {
     }
 }
 
+/* Media queries for screen sizes of min width of 1100px */
+
 @media screen and (min-width: 1100px) {
 
     .btn {
         width: 20rem;
-        height: 12rem;
+        height: 10rem;
         font-size: 2rem;
     }
 

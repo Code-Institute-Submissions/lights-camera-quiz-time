@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /**
  * This function resets the score and question counter to zero
- * it then displays the questions associated to the different categories
+ * and then displays the questions associated with the different categories
  * based on which button and game type the user selected
  * @param {string} gameType (the button the user selected)
  */
@@ -174,7 +174,7 @@ username.addEventListener("keyup", function () {
 
 /**
  * This function executes when a user clicks the save button
- * This function can only executes if a user enters their username in the input field
+ * This function can only execute if a user enters their username in the input field
  * The user scores are sorted from highest score to lowest and
  * saved in local storage and displayed to the user on the highscores screen.
  * */
@@ -191,7 +191,7 @@ function saveHighScore(event) {
 
     highScores.push(totalScore);
 
-    // Line 596 of code to sort the array of highscores taken from James Q Quick
+    // Line 596 of code to sort the array of highscores taken from James Q Quick tutorial 8
     highScores.sort((a, b) => b.score - a.score);
 
     // Code to remove the lowest score

@@ -174,7 +174,7 @@ The high scores screen displays the top 5 results including the score and the us
 
 ### Testing on Browers and Devices
 #### Browser Testing
-- The site was tested on Google Chrome, Microsoft Edge and Internet Explorer.
+- The site was tested on Google Chrome and Microsoft Edge.
 - The layout and positioning of the buttons on the home screen and question and answer boxes appear consistent.
 - The external social media links all work and open in a new tab.
 - The internal links to the home screen accessible from the main heading and home buttons on the end screen and high scores screen all return the user to the home screen.
@@ -201,9 +201,15 @@ The high scores screen displays the top 5 results including the score and the us
 #### Lighthouse Testing
 - I carried out a Lighthouse test using the Google Chrome Lighthouse facility for both desktop and mobile. The results are very positive for accessibility, best practices and search engine optimisation. The performance was quite low on mobile devices so I used TinyPNG to compress the main popcorn image and it reduced the size by 70%.
 ![Compressed main image](assets/images/compressed-main-image.png)
+The second round of tests were very positive for desktop, the performance on mobile leaves room for improvement however it is better than initial testing after reducing the main image size.
 
-![Lighthouse test mobile](assets/images/lighthouse-report-mobile.png)
+##### Test 1
+![Lighthouse test 1 mobile](assets/images/lighthouse-report-mobile.png)
 ![Lighthouse test desktop](assets/images/lighthouse-report-desktop.png)
+
+##### Test 2
+![Lighthouse test 2 mobile](assets/images/lighthouse-report-mobile-test2.png)
+![Lighthouse test 2 desktop](assets/images/lighthouse-report-desktop-test2.png)
 
 ### Bugs
 #### Solved Bugs
@@ -248,7 +254,8 @@ Initially I was hesitant to use the json method as I felt it was causing bugs on
 
 #### Unsolved Bugs
 - A warning appears on the CSS validator regarding the import file not being checked but there are no errors.
-- I noticed when I click outside a button and not directly on a button on the home screen it takes me to the end screen. I initally thought it might be a bug due to using the fetch method inside a function however I've noticed it's because I have targetted the div holding the buttons to add the listener for clicks.
+- The favicon appears when hosted through the port on Gitpod but is not appearing when deployed through Github.
+- I noticed when I click outside a button and not directly on a button on the home screen it takes me to the end screen. I initally thought it might be a bug due to using the fetch method inside a function however I've noticed it's because I have targetted the div holding the buttons to add the listener for clicks instead of the buttons directly.
 ![Unsolved bug](assets/images/unsolved-bug.png) 
 If I access the buttons by tag name instead it will also access the button on the end screen that executes the saveHighScore function when clicked. I have left the code how it is for the time being as I would be concerned about introducing errors or bugs at this stage.
 
@@ -263,6 +270,7 @@ The site is accessible [here](https://louiseconlon11.github.io/lights-camera-qui
 4. Click on pages on the left hand side under the code and automation heading.
 5. Under the heading of build and deployment click the branch drop down menu and select main and click save.
 6. Refresh the page and a notification will display that your site is now live and click the visit site option.
+
 ![Deployment Instructions](assets/images/github-deployment.png)
 
 ### Credits
