@@ -39,10 +39,10 @@ function toggleScreen(id, isActive) {
 document.addEventListener('DOMContentLoaded', function () {
     showScreen('start-screen');
     fetch('./quiz.json')
-    .then((response) => response.json())
-    .then(function (data) {
-        mainObj = data;
-    });
+        .then((response) => response.json())
+        .then(function (data) {
+            mainObj = data;
+        });
     document.getElementById('start-btns').addEventListener('click', function (event) {
         let button = event.target;
         let gameType = button.getAttribute('data-type');
@@ -177,7 +177,7 @@ username.addEventListener("keyup", function () {
  * This function can only executes if a user enters their username in the input field
  * The user scores are sorted from highest score to lowest and
  * saved in local storage and displayed to the user on the highscores screen.
- * */ 
+ * */
 
 function saveHighScore(event) {
     event.preventDefault();
